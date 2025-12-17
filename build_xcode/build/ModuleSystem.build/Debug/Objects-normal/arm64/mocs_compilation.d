@@ -1,0 +1,19 @@
+dependencies: \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/mocs_compilation.cpp \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/6YEA5652QU/moc_MainWindow.cpp \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/6YEA5652QU/../../../../include/MainWindow.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/6YEA5652QU/../../../../include/modules/ModuleManager.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/6YEA5652QU/../../../../include/modules/ModuleBase.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/6YEA5652QU/../../../../include/modules/ExampleModule.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/6YEA5652QU/../../../../include/modules/CustomModuleTemplate.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/6YEA5652QU/../../../../include/modules/../PerformanceMonitor.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/6YEA5652QU/moc_PerformanceMonitor.cpp \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/6YEA5652QU/../../../../include/PerformanceMonitor.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/DL2EU2DS2K/moc_CustomModuleTemplate.cpp \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/DL2EU2DS2K/../../../../include/modules/CustomModuleTemplate.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/DL2EU2DS2K/moc_ExampleModule.cpp \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/DL2EU2DS2K/../../../../include/modules/ExampleModule.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/DL2EU2DS2K/moc_ModuleBase.cpp \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/DL2EU2DS2K/../../../../include/modules/ModuleBase.h \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/DL2EU2DS2K/moc_ModuleManager.cpp \
+  /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build_xcode/ModuleSystem_autogen/include_Debug/DL2EU2DS2K/../../../../include/modules/ModuleManager.h

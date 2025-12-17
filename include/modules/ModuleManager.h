@@ -7,7 +7,7 @@
 #include "ModuleBase.h"
 #include "ExampleModule.h"
 #include "CustomModuleTemplate.h"
-#include "CalculatorModule.h"
+#include "../PerformanceMonitor.h"
 
 /**
  * @brief 模块管理器
@@ -26,10 +26,12 @@ public:
     explicit ModuleManager(QObject *parent = nullptr);
     ~ModuleManager();
 
-    // 模块创建（返回nullptr表示达到数量限制）
-    ExampleModule* createExampleModule();
-    CustomModuleTemplate* createCustomModule();
-    CalculatorModule* createCalculatorModule();
+    // 模块创建（会检查性能限制）
+    ExampleModule* createExampleModule(QString* performanceReason = nullptr);
+    CustomModuleTemplate* createCustomModule(QString* performanceReason = nullptr);
+
+    // 获取性能监控器
+    PerformanceMonitor* performanceMonitor() { return m_performanceMonitor; }
 
     // 通用模块创建方法
     template<typename T>
@@ -60,12 +62,6 @@ public:
     int customModuleCount() const { return m_customModules.size(); }
     int moduleCountByType(ModuleBase::ModuleType type) const;
 
-    // 限制常量
-    static const int MAX_EXAMPLE_MODULES = 5;
-    static const int MAX_CUSTOM_MODULES = 10;
-    static const int MAX_CALCULATOR_MODULES = 3;
-    static const int MAX_TOTAL_MODULES = 50;
-
 signals:
     void moduleCreated(ModuleBase* module);
     void moduleDestroyed(ModuleBase* module);
@@ -81,10 +77,12 @@ private:
     QList<ModuleBase*> m_allModules;
     QList<ExampleModule*> m_exampleModules;
     QList<CustomModuleTemplate*> m_customModules;
-    QList<CalculatorModule*> m_calculatorModules;
 
     // 类型计数器
     QMap<ModuleBase::ModuleType, int> m_typeCounts;
+
+    // 性能监控
+    PerformanceMonitor* m_performanceMonitor;
 };
 
 #endif // MODULEMANAGER_H

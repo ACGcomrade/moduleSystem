@@ -3,19 +3,22 @@
 
 #include <QMainWindow>
 #include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QScrollArea>
 #include <QLabel>
 #include <QPushButton>
 #include <QMenuBar>
+#include <QList>
 #include "modules/ModuleManager.h"
-#include "modules/CalculatorModule.h"
 
 /**
- * @brief 主窗口类
+ * @brief 主窗口类（改进版）
  *
  * 提供模块化UI的主窗口，包含：
  * - 菜单栏用于创建模块
- * - 3个槽位用于放置模块
+ * - 动态槽位用于放置模块（自动扩展）
  * - 支持模块的拖拽和重新排列
+ * - 支持水平滚动以容纳更多模块
  */
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -40,17 +43,33 @@ private slots:
 private:
     void setupUI();
     void setupMenuBar();
-    void setupSlots();
-    bool tryPlaceModuleInSlot(ModuleBase* module);
+    void setupBoard();
+    int findEmptySlot();
+    int findEmptyVisibleSlot();  // 查找可见的空槽位
+    void placeModuleInSlot(ModuleBase* module, int slotIndex);
     void removeModuleFromSlot(ModuleBase* module);
-    void updateSlotPlaceholders();
+    int findSlotAtPosition(const QPoint& globalPos);
+    bool isSlotVisible(int slotIndex);  // 检查槽位是否在可视区域内
+    void highlightSlot(int slotIndex, bool highlight);
+    void ensureMinimumSlots();
+    void addNewSlot();
 
     // UI组件
     QWidget* m_centralWidget;
-    QHBoxLayout* m_mainLayout;
-    QWidget* m_slots[3];  // 3个槽位
-    QLabel* m_placeholders[3];  // 占位符标签
-    ModuleBase* m_slotModules[3];  // 槽位中的模块
+    QScrollArea* m_scrollArea;
+    QWidget* m_boardWidget;
+    QHBoxLayout* m_boardLayout;
+
+    // 动态槽位管理
+    struct Slot {
+        QWidget* widget;
+        QLabel* placeholder;
+        ModuleBase* module;
+    };
+    QList<Slot> m_slots;  // 动态槽位列表
+    static const int MIN_SLOTS = 3;  // 最少保持3个空槽位
+    static const int SLOT_MIN_WIDTH = 300;
+    static const int SLOT_MIN_HEIGHT = 400;
 
     // 模块管理
     ModuleManager* m_moduleManager;

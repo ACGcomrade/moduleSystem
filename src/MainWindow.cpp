@@ -2,18 +2,21 @@
 #include <QApplication>
 #include <QDebug>
 #include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QScrollArea>
+#include <QScrollBar>
 #include <QLabel>
 #include <QPushButton>
 #include <QMenuBar>
 #include <QMessageBox>
-#include <QVBoxLayout>
+#include <QCursor>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , m_moduleManager(new ModuleManager(this))
 {
-    setWindowTitle("Module System Template");
-    setMinimumSize(800, 600);
+    setWindowTitle("Module System - Unlimited");
+    setMinimumSize(900, 650);
 
     setupUI();
     setupMenuBar();
@@ -24,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_moduleManager, &ModuleManager::moduleDestroyed,
             this, &MainWindow::onModuleDestroyed);
 
-    qDebug() << "[MainWindow] Initialized";
+    qDebug() << "[MainWindow] Initialized with dynamic board system";
 }
 
 MainWindow::~MainWindow() {
@@ -35,30 +38,71 @@ void MainWindow::setupUI() {
     m_centralWidget = new QWidget();
     setCentralWidget(m_centralWidget);
 
-    m_mainLayout = new QHBoxLayout(m_centralWidget);
-    m_mainLayout->setSpacing(10);
-    m_mainLayout->setContentsMargins(10, 10, 10, 10);
+    QVBoxLayout* centralLayout = new QVBoxLayout(m_centralWidget);
+    centralLayout->setSpacing(10);
+    centralLayout->setContentsMargins(10, 10, 10, 10);
 
-    setupSlots();
+    // 标题标签
+    QLabel* titleLabel = new QLabel("Module System - Drag modules out or create new ones");
+    titleLabel->setStyleSheet("font-size: 16px; font-weight: bold; color: #333; padding: 5px;");
+    centralLayout->addWidget(titleLabel);
+
+    // 白板滚动区域
+    m_scrollArea = new QScrollArea();
+    m_scrollArea->setWidgetResizable(true);
+    m_scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    m_scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    m_scrollArea->setStyleSheet("QScrollArea { border: none; background-color: #f5f5f5; }");
+
+    m_boardWidget = new QWidget();
+    m_boardLayout = new QHBoxLayout(m_boardWidget);
+    m_boardLayout->setSpacing(10);
+    m_boardLayout->setContentsMargins(10, 10, 10, 10);
+    m_boardLayout->setAlignment(Qt::AlignLeft);
+
+    m_scrollArea->setWidget(m_boardWidget);
+    centralLayout->addWidget(m_scrollArea);
+
+    // 初始化白板槽位
+    setupBoard();
+
+    // 状态栏
+    QLabel* statsLabel = new QLabel("Unlimited modules | Use menu to create modules");
+    statsLabel->setStyleSheet("color: #666; font-size: 12px; padding: 5px;");
+    centralLayout->addWidget(statsLabel);
 }
 
-void MainWindow::setupSlots() {
-    for (int i = 0; i < 3; ++i) {
-        m_slots[i] = new QWidget();
-        m_slots[i]->setMinimumSize(250, 400);
-        m_slots[i]->setStyleSheet("border: 2px dashed #aaa; border-radius: 5px;");
-
-        QVBoxLayout* slotLayout = new QVBoxLayout(m_slots[i]);
-        slotLayout->setAlignment(Qt::AlignCenter);
-
-        m_placeholders[i] = new QLabel(QString("Slot %1\nDrop module here").arg(i + 1));
-        m_placeholders[i]->setAlignment(Qt::AlignCenter);
-        m_placeholders[i]->setStyleSheet("color: #666; font-size: 14px;");
-        slotLayout->addWidget(m_placeholders[i]);
-
-        m_slotModules[i] = nullptr;
-        m_mainLayout->addWidget(m_slots[i]);
+void MainWindow::setupBoard() {
+    // 创建初始的MIN_SLOTS个空槽位
+    for (int i = 0; i < MIN_SLOTS; ++i) {
+        addNewSlot();
     }
+    qDebug() << "[MainWindow] Board initialized with" << MIN_SLOTS << "slots";
+}
+
+void MainWindow::addNewSlot() {
+    Slot slot;
+
+    slot.widget = new QWidget();
+    slot.widget->setMinimumSize(SLOT_MIN_WIDTH, SLOT_MIN_HEIGHT);
+    slot.widget->setMaximumWidth(SLOT_MIN_WIDTH);
+    slot.widget->setStyleSheet("border: 2px dashed #bbb; border-radius: 8px; background-color: white;");
+
+    QVBoxLayout* slotLayout = new QVBoxLayout(slot.widget);
+    slotLayout->setAlignment(Qt::AlignCenter);
+    slotLayout->setContentsMargins(10, 10, 10, 10);
+
+    slot.placeholder = new QLabel(QString("Slot %1\n\nDrag module here\nor create new").arg(m_slots.size() + 1));
+    slot.placeholder->setAlignment(Qt::AlignCenter);
+    slot.placeholder->setStyleSheet("color: #999; font-size: 13px; border: none;");
+    slotLayout->addWidget(slot.placeholder);
+
+    slot.module = nullptr;
+
+    m_slots.append(slot);
+    m_boardLayout->addWidget(slot.widget);
+
+    qDebug() << "[MainWindow] Added new slot, total slots:" << m_slots.size();
 }
 
 void MainWindow::setupMenuBar() {
@@ -74,9 +118,6 @@ void MainWindow::setupMenuBar() {
     QAction* createCustomAction = moduleMenu->addAction("Create Custom Module");
     connect(createCustomAction, &QAction::triggered, this, &MainWindow::onCreateCustomModule);
 
-    QAction* createCalculatorAction = moduleMenu->addAction("Create Calculator Module");
-    connect(createCalculatorAction, &QAction::triggered, this, &MainWindow::onCreateCalculatorModule);
-
     moduleMenu->addSeparator();
 
     QAction* exitAction = moduleMenu->addAction("Exit");
@@ -84,33 +125,31 @@ void MainWindow::setupMenuBar() {
 }
 
 void MainWindow::onCreateExampleModule() {
-    ExampleModule* module = m_moduleManager->createExampleModule();
+    QString performanceReason;
+    ExampleModule* module = m_moduleManager->createExampleModule(&performanceReason);
+
     if (!module) {
-        QMessageBox::information(this, "Limit Reached",
-            "Maximum number of Example modules reached.");
+        // 性能限制，显示警告
+        QMessageBox::warning(this, "性能限制",
+            QString("无法创建新模块\n\n%1").arg(performanceReason));
         return;
     }
-    // 模块会通过信号自动处理
+
+    qDebug() << "[MainWindow] Example module created";
 }
 
 void MainWindow::onCreateCustomModule() {
-    CustomModuleTemplate* module = m_moduleManager->createCustomModule();
-    if (!module) {
-        QMessageBox::information(this, "Limit Reached",
-            "Maximum number of Custom modules reached.");
-        return;
-    }
-    // 模块会通过信号自动处理
-}
+    QString performanceReason;
+    CustomModuleTemplate* module = m_moduleManager->createCustomModule(&performanceReason);
 
-void MainWindow::onCreateCalculatorModule() {
-    CalculatorModule* module = m_moduleManager->createCalculatorModule();
     if (!module) {
-        QMessageBox::information(this, "Limit Reached",
-            "Maximum number of Calculator modules reached.");
+        // 性能限制，显示警告
+        QMessageBox::warning(this, "性能限制",
+            QString("无法创建新模块\n\n%1").arg(performanceReason));
         return;
     }
-    // 模块会通过信号自动处理
+
+    qDebug() << "[MainWindow] Custom module created";
 }
 
 void MainWindow::onModuleCreated(ModuleBase* module) {
@@ -122,12 +161,19 @@ void MainWindow::onModuleCreated(ModuleBase* module) {
     connect(module, &ModuleBase::closeRequested, this, &MainWindow::onModuleCloseRequested);
     connect(module, &ModuleBase::dragPositionChanged, this, &MainWindow::onModuleDragPositionChanged);
 
-    // 尝试放入空槽位
-    if (!tryPlaceModuleInSlot(module)) {
-        // 如果没有空槽位，设置为独立窗口
-        module->setDetached(true);
-        m_detachedModules.append(module);
+    // 查找空槽位
+    int emptySlot = findEmptySlot();
+    if (emptySlot >= 0) {
+        // 放入空槽位
+        placeModuleInSlot(module, emptySlot);
+    } else {
+        // 没有空槽位，创建新槽位
+        addNewSlot();
+        placeModuleInSlot(module, m_slots.size() - 1);
     }
+
+    // 确保至少保持MIN_SLOTS个空槽位
+    ensureMinimumSlots();
 }
 
 void MainWindow::onModuleDestroyed(ModuleBase* module) {
@@ -145,7 +191,7 @@ void MainWindow::onModuleDetachRequested(ModuleBase* module) {
     removeModuleFromSlot(module);
 
     // 设置为独立窗口
-    module->setDetached(true);
+    module->setDetachedState(true);
     m_detachedModules.append(module);
 }
 
@@ -155,11 +201,70 @@ void MainWindow::onModuleReattachRequested(ModuleBase* module) {
     // 从独立窗口列表移除
     m_detachedModules.removeAll(module);
 
-    // 尝试重新放入槽位
-    if (!tryPlaceModuleInSlot(module)) {
-        // 如果没有空槽位，保持独立状态
-        module->setDetached(true);
-        m_detachedModules.append(module);
+    // 获取当前鼠标位置
+    QPoint mouseGlobalPos = QCursor::pos();
+
+    // 先尝试查找鼠标下方的具体槽位
+    int targetSlot = findSlotAtPosition(mouseGlobalPos);
+
+    qDebug() << "[MainWindow] Mouse global pos:" << mouseGlobalPos;
+    qDebug() << "[MainWindow] Target slot:" << targetSlot;
+
+    if (targetSlot >= 0) {
+        // 找到了具体的可见槽位
+        if (!m_slots[targetSlot].module) {
+            // 槽位为空，直接放入
+            qDebug() << "[MainWindow] Placing module in target visible slot:" << targetSlot;
+            placeModuleInSlot(module, targetSlot);
+        } else {
+            // 槽位已占用，查找其他可见的空槽位
+            int emptySlot = findEmptyVisibleSlot();
+            if (emptySlot >= 0) {
+                qDebug() << "[MainWindow] Target slot occupied, using empty visible slot:" << emptySlot;
+                placeModuleInSlot(module, emptySlot);
+            } else {
+                // 没有可见的空槽位，保持独立状态
+                qDebug() << "[MainWindow] No visible empty slots, module stays detached";
+                module->setDetachedState(true);
+                m_detachedModules.append(module);
+            }
+        }
+    } else {
+        // 没有找到可见槽位，检查是否在白板区域附近
+        QPoint scrollAreaLocalPos = m_scrollArea->mapFromGlobal(mouseGlobalPos);
+        QRect scrollAreaRect = m_scrollArea->rect();
+
+        // 扩大白板区域检测范围
+        scrollAreaRect = scrollAreaRect.adjusted(-50, -50, 50, 50);
+
+        if (scrollAreaRect.contains(scrollAreaLocalPos)) {
+            // 在白板附近，找个可见的空槽位放进去
+            int emptySlot = findEmptyVisibleSlot();
+            if (emptySlot >= 0) {
+                qDebug() << "[MainWindow] Near board area, placing in empty visible slot:" << emptySlot;
+                placeModuleInSlot(module, emptySlot);
+            } else {
+                // 没有可见的空槽位，保持独立状态
+                qDebug() << "[MainWindow] Near board but no visible slots, module stays detached";
+                module->setDetachedState(true);
+                m_detachedModules.append(module);
+            }
+        } else {
+            // 远离白板区域，保持独立状态
+            qDebug() << "[MainWindow] Module stays detached (far from board)";
+            module->setDetachedState(true);
+            m_detachedModules.append(module);
+        }
+    }
+
+    // 清除拖拽高亮
+    for (int i = 0; i < m_slots.size(); ++i) {
+        highlightSlot(i, false);
+    }
+
+    // 确保足够的空槽位
+    if (!m_detachedModules.contains(module)) {
+        ensureMinimumSlots();
     }
 }
 
@@ -179,50 +284,85 @@ void MainWindow::onModuleCloseRequested(ModuleBase* module) {
 }
 
 void MainWindow::onModuleDragPositionChanged(ModuleBase* module, const QPoint& globalPos) {
-    // 可以在这里添加拖拽预览效果
-    Q_UNUSED(module)
-    Q_UNUSED(globalPos)
+    // 查找拖拽位置下的槽位并高亮
+    int targetSlot = findSlotAtPosition(globalPos);
+
+    // 清除所有槽位的高亮
+    for (int i = 0; i < m_slots.size(); ++i) {
+        highlightSlot(i, false);
+    }
+
+    // 高亮目标槽位
+    if (targetSlot >= 0 && !m_slots[targetSlot].module) {
+        highlightSlot(targetSlot, true);
+    }
+
+    Q_UNUSED(module);
 }
 
-bool MainWindow::tryPlaceModuleInSlot(ModuleBase* module) {
-    for (int i = 0; i < 3; ++i) {
-        if (!m_slotModules[i]) {
-            // 找到空槽位
-            m_slotModules[i] = module;
-            module->setDetached(false);
-
-            // 替换占位符
-            QVBoxLayout* slotLayout = qobject_cast<QVBoxLayout*>(m_slots[i]->layout());
-            if (slotLayout) {
-                // 移除占位符
-                slotLayout->removeWidget(m_placeholders[i]);
-                m_placeholders[i]->hide();
-
-                // 添加模块
-                slotLayout->addWidget(module);
-            }
-
-            qDebug() << "[MainWindow] Module placed in slot" << i;
-            return true;
+int MainWindow::findEmptySlot() {
+    for (int i = 0; i < m_slots.size(); ++i) {
+        if (!m_slots[i].module) {
+            return i;
         }
     }
-    return false;
+    return -1;  // 没有空槽位
+}
+
+int MainWindow::findEmptyVisibleSlot() {
+    // 首先尝试找可见的空槽位
+    for (int i = 0; i < m_slots.size(); ++i) {
+        if (!m_slots[i].module && isSlotVisible(i)) {
+            qDebug() << "[MainWindow] Found empty visible slot:" << i;
+            return i;
+        }
+    }
+    qDebug() << "[MainWindow] No empty visible slot found";
+    return -1;  // 没有可见的空槽位
+}
+
+void MainWindow::placeModuleInSlot(ModuleBase* module, int slotIndex) {
+    if (slotIndex < 0 || slotIndex >= m_slots.size()) {
+        qWarning() << "[MainWindow] Invalid slot index:" << slotIndex;
+        return;
+    }
+
+    Slot& slot = m_slots[slotIndex];
+
+    // 如果槽位已有模块，先移除
+    if (slot.module) {
+        removeModuleFromSlot(slot.module);
+    }
+
+    slot.module = module;
+    module->setDetachedState(false);
+
+    // 替换占位符
+    QVBoxLayout* slotLayout = qobject_cast<QVBoxLayout*>(slot.widget->layout());
+    if (slotLayout) {
+        slotLayout->removeWidget(slot.placeholder);
+        slot.placeholder->hide();
+        slotLayout->addWidget(module);
+    }
+
+    qDebug() << "[MainWindow] Module" << module->moduleTitle() << "placed in slot" << slotIndex;
 }
 
 void MainWindow::removeModuleFromSlot(ModuleBase* module) {
-    for (int i = 0; i < 3; ++i) {
-        if (m_slotModules[i] == module) {
-            m_slotModules[i] = nullptr;
+    for (int i = 0; i < m_slots.size(); ++i) {
+        if (m_slots[i].module == module) {
+            Slot& slot = m_slots[i];
+            slot.module = nullptr;
 
             // 从布局中移除模块
-            QVBoxLayout* slotLayout = qobject_cast<QVBoxLayout*>(m_slots[i]->layout());
+            QVBoxLayout* slotLayout = qobject_cast<QVBoxLayout*>(slot.widget->layout());
             if (slotLayout) {
                 slotLayout->removeWidget(module);
                 module->setParent(nullptr);
 
                 // 重新显示占位符
-                slotLayout->addWidget(m_placeholders[i]);
-                m_placeholders[i]->show();
+                slotLayout->addWidget(slot.placeholder);
+                slot.placeholder->show();
             }
 
             qDebug() << "[MainWindow] Module removed from slot" << i;
@@ -231,6 +371,103 @@ void MainWindow::removeModuleFromSlot(ModuleBase* module) {
     }
 }
 
-void MainWindow::updateSlotPlaceholders() {
-    // 更新占位符显示（如果需要）
+int MainWindow::findSlotAtPosition(const QPoint& globalPos) {
+    // 将全局坐标转换为白板坐标
+    QPoint boardLocalPos = m_boardWidget->mapFromGlobal(globalPos);
+
+    // 检查每个槽位
+    for (int i = 0; i < m_slots.size(); ++i) {
+        QWidget* slotWidget = m_slots[i].widget;
+
+        // 获取槽位在白板中的几何区域
+        QRect slotRect = slotWidget->geometry();
+
+        // 扩大检测区域，使其更容易被检测到
+        // 这样即使模块大小改变，也能更容易放回
+        slotRect = slotRect.adjusted(-20, -20, 20, 20);
+
+        // 检查鼠标是否在此槽位内，并且槽位必须在可视区域内
+        if (slotRect.contains(boardLocalPos) && isSlotVisible(i)) {
+            qDebug() << "[MainWindow] Slot" << i << "detected at pos:" << boardLocalPos
+                     << "slot rect:" << slotRect << "(visible)";
+            return i;
+        }
+    }
+
+    qDebug() << "[MainWindow] No visible slot found at pos:" << boardLocalPos;
+    return -1;
+}
+
+bool MainWindow::isSlotVisible(int slotIndex) {
+    if (slotIndex < 0 || slotIndex >= m_slots.size()) {
+        return false;
+    }
+
+    QWidget* slotWidget = m_slots[slotIndex].widget;
+
+    // 获取槽位在白板中的几何区域
+    QRect slotRect = slotWidget->geometry();
+
+    // 将槽位的矩形转换到滚动区域的viewport坐标系
+    QRect viewportRect = m_scrollArea->viewport()->rect();
+
+    // 计算槽位在viewport中的可见区域
+    // 需要考虑滚动偏移
+    int scrollX = m_scrollArea->horizontalScrollBar()->value();
+    QRect slotInViewport = slotRect.translated(-scrollX, 0);
+
+    // 计算交集，判断是否有可见部分
+    QRect visiblePart = slotInViewport.intersected(viewportRect);
+
+    // 如果可见部分的宽度至少是槽位宽度的30%，认为是可见的
+    bool visible = visiblePart.width() >= slotRect.width() * 0.3;
+
+    if (!visible) {
+        qDebug() << "[MainWindow] Slot" << slotIndex << "is not visible"
+                 << "slotRect:" << slotRect
+                 << "scrollX:" << scrollX
+                 << "viewportRect:" << viewportRect
+                 << "visiblePart:" << visiblePart;
+    }
+
+    return visible;
+}
+
+void MainWindow::highlightSlot(int slotIndex, bool highlight) {
+    if (slotIndex < 0 || slotIndex >= m_slots.size()) {
+        return;
+    }
+
+    Slot& slot = m_slots[slotIndex];
+    if (highlight) {
+        slot.widget->setStyleSheet(
+            "border: 3px solid #4CAF50; "
+            "border-radius: 8px; "
+            "background-color: #E8F5E9;"
+        );
+    } else {
+        slot.widget->setStyleSheet(
+            "border: 2px dashed #bbb; "
+            "border-radius: 8px; "
+            "background-color: white;"
+        );
+    }
+}
+
+void MainWindow::ensureMinimumSlots() {
+    // 计算当前空槽位数量
+    int emptySlots = 0;
+    for (const Slot& slot : m_slots) {
+        if (!slot.module) {
+            emptySlots++;
+        }
+    }
+
+    // 如果空槽位不足MIN_SLOTS，添加新槽位
+    while (emptySlots < MIN_SLOTS) {
+        addNewSlot();
+        emptySlots++;
+    }
+
+    qDebug() << "[MainWindow] Ensured" << emptySlots << "empty slots available";
 }

@@ -50,6 +50,9 @@ public:
     virtual void clear() = 0;
     virtual QWidget* contentWidget() = 0;
 
+    // Public method to set detached state
+    void setDetachedState(bool detached, const QPoint& globalMousePos = QPoint()) { setDetached(detached, globalMousePos); }
+
 signals:
     void detachRequested(ModuleBase* module);
     void closeRequested(ModuleBase* module);
@@ -62,6 +65,9 @@ protected:
     void mouseReleaseEvent(QMouseEvent *event) override;
     void mouseDoubleClickEvent(QMouseEvent *event) override;
     void moveEvent(QMoveEvent *event) override;
+    bool event(QEvent *event) override;
+
+    void setDetached(bool detached, const QPoint& globalMousePos = QPoint());
 
 private slots:
     void onMoveTimeout();
@@ -73,10 +79,12 @@ private:
     bool m_isDetached;
 
     // 拖拽相关
-    bool m_dragging;
+    bool m_dragging;              // 内容区域拖拽标志
+    bool m_titleBarDragging;      // 标题栏拖拽标志（Qt系统拖动）
     QPoint m_dragStartPos;
-    QPoint m_lastPos;  // 记录上一次位置，用于检测移动
-    QTimer* m_moveTimer;  // 检测移动停止的定时器
+    QPoint m_lastPos;             // 记录上一次位置，用于检测移动
+    QTimer* m_moveTimer;          // 检测移动停止的定时器
+    QPoint m_lastMoveEventPos;    // 记录moveEvent的上一次位置
 
     static int s_nextId;
 };

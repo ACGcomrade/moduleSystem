@@ -1,0 +1,4 @@
+set(__QT_DEPLOY_TARGET_ModuleSystem_FILE /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/Debug/ModuleSystem)
+set(__QT_DEPLOY_TARGET_ModuleSystem_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_test_modules_FILE /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/Debug/test_modules)
+set(__QT_DEPLOY_TARGET_test_modules_TYPE EXECUTABLE)

@@ -3,8 +3,9 @@
 
 ModuleManager::ModuleManager(QObject *parent)
     : QObject(parent)
+    , m_performanceMonitor(new PerformanceMonitor(this))
 {
-    qDebug() << "[ModuleManager] Initialized";
+    qDebug() << "[ModuleManager] Initialized with performance monitoring";
 }
 
 ModuleManager::~ModuleManager() {
@@ -12,9 +13,10 @@ ModuleManager::~ModuleManager() {
     qDebug() << "[ModuleManager] Destroyed";
 }
 
-ExampleModule* ModuleManager::createExampleModule() {
-    if (!canCreateModule(ModuleBase::Example)) {
-        qWarning() << "[ModuleManager] Cannot create ExampleModule: limit reached";
+ExampleModule* ModuleManager::createExampleModule(QString* performanceReason) {
+    // 检查性能限制
+    if (!m_performanceMonitor->canCreateNewModule(performanceReason)) {
+        qWarning() << "[ModuleManager] Cannot create ExampleModule due to performance constraints";
         return nullptr;
     }
 
@@ -23,24 +25,14 @@ ExampleModule* ModuleManager::createExampleModule() {
     return module;
 }
 
-CustomModuleTemplate* ModuleManager::createCustomModule() {
-    if (!canCreateModule(ModuleBase::Custom)) {
-        qWarning() << "[ModuleManager] Cannot create CustomModule: limit reached";
+CustomModuleTemplate* ModuleManager::createCustomModule(QString* performanceReason) {
+    // 检查性能限制
+    if (!m_performanceMonitor->canCreateNewModule(performanceReason)) {
+        qWarning() << "[ModuleManager] Cannot create CustomModule due to performance constraints";
         return nullptr;
     }
 
     CustomModuleTemplate* module = new CustomModuleTemplate();
-    registerModule(module);
-    return module;
-}
-
-CalculatorModule* ModuleManager::createCalculatorModule() {
-    if (!canCreateModule(ModuleBase::Calculator)) {
-        qWarning() << "[ModuleManager] Cannot create CalculatorModule: limit reached";
-        return nullptr;
-    }
-
-    CalculatorModule* module = new CalculatorModule();
     registerModule(module);
     return module;
 }
@@ -90,23 +82,9 @@ int ModuleManager::moduleCountByType(ModuleBase::ModuleType type) const {
 }
 
 bool ModuleManager::canCreateModule(ModuleBase::ModuleType type) const {
-    // 检查总模块数限制
-    if (m_allModules.size() >= MAX_TOTAL_MODULES) {
-        return false;
-    }
-
-    // 检查类型特定限制
-    switch (type) {
-        case ModuleBase::Example:
-            return m_exampleModules.size() < MAX_EXAMPLE_MODULES;
-        case ModuleBase::Custom:
-            return m_customModules.size() < MAX_CUSTOM_MODULES;
-        case ModuleBase::Calculator:
-            return m_calculatorModules.size() < MAX_CALCULATOR_MODULES;
-        default:
-            // 对于其他类型，默认允许创建，但可以在这里添加更多限制
-            return true;
-    }
+    // 无限制版本 - 总是允许创建模块
+    Q_UNUSED(type);
+    return true;
 }
 
 void ModuleManager::registerModule(ModuleBase* module) {
@@ -121,9 +99,6 @@ void ModuleManager::registerModule(ModuleBase* module) {
             break;
         case ModuleBase::Custom:
             m_customModules.append(static_cast<CustomModuleTemplate*>(module));
-            break;
-        case ModuleBase::Calculator:
-            m_calculatorModules.append(static_cast<CalculatorModule*>(module));
             break;
         default:
             // 对于其他类型，不添加到特定列表
@@ -153,9 +128,6 @@ void ModuleManager::unregisterModule(ModuleBase* module) {
             break;
         case ModuleBase::Custom:
             m_customModules.removeAll(static_cast<CustomModuleTemplate*>(module));
-            break;
-        case ModuleBase::Calculator:
-            m_calculatorModules.removeAll(static_cast<CalculatorModule*>(module));
             break;
         default:
             break;
