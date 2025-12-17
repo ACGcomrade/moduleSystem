@@ -1,0 +1,8 @@
+/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem.dir
+/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/test_modules.dir
+/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/edit_cache.dir
+/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/rebuild_cache.dir
+/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem_autogen_timestamp_deps.dir
+/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem_autogen.dir
+/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/test_modules_autogen_timestamp_deps.dir
+/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/test_modules_autogen.dir
