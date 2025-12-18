@@ -10,6 +10,9 @@
 #include <QMenuBar>
 #include <QMessageBox>
 #include <QCursor>
+#include <QTimer>
+#include <QResizeEvent>
+#include <QMoveEvent>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -26,6 +29,9 @@ MainWindow::MainWindow(QWidget *parent)
             this, &MainWindow::onModuleCreated);
     connect(m_moduleManager, &ModuleManager::moduleDestroyed,
             this, &MainWindow::onModuleDestroyed);
+
+    // 安装事件过滤器，监听scrollArea的滚动事件
+    m_scrollArea->installEventFilter(this);
 
     qDebug() << "[MainWindow] Initialized with dynamic board system";
 }
@@ -161,14 +167,21 @@ void MainWindow::onModuleCreated(ModuleBase* module) {
     connect(module, &ModuleBase::closeRequested, this, &MainWindow::onModuleCloseRequested);
     connect(module, &ModuleBase::dragPositionChanged, this, &MainWindow::onModuleDragPositionChanged);
 
+    // 添加到模块列表
+    m_allModules.append(module);
+
+    // 新架构：更新槽位几何信息
+    updateSlotGeometries();
+
     // 查找空槽位
     int emptySlot = findEmptySlot();
     if (emptySlot >= 0) {
-        // 放入空槽位
+        // 附着到空槽位
         placeModuleInSlot(module, emptySlot);
     } else {
         // 没有空槽位，创建新槽位
         addNewSlot();
+        updateSlotGeometries();  // 更新几何信息
         placeModuleInSlot(module, m_slots.size() - 1);
     }
 
@@ -179,27 +192,22 @@ void MainWindow::onModuleCreated(ModuleBase* module) {
 void MainWindow::onModuleDestroyed(ModuleBase* module) {
     qDebug() << "[MainWindow] Module destroyed:" << module->moduleTitle();
 
-    // 从槽位或独立窗口列表中移除
+    // 新架构：从槽位和模块列表中移除
     removeModuleFromSlot(module);
-    m_detachedModules.removeAll(module);
+    m_allModules.removeAll(module);
 }
 
 void MainWindow::onModuleDetachRequested(ModuleBase* module) {
     qDebug() << "[MainWindow] Detach requested for:" << module->moduleTitle();
 
-    // 从槽位移除
+    // 新架构：只需从槽位移除（模块已经是独立窗口）
     removeModuleFromSlot(module);
 
-    // 设置为独立窗口
-    module->setDetachedState(true);
-    m_detachedModules.append(module);
+    // 模块现在处于自由状态，可以自由移动
 }
 
 void MainWindow::onModuleReattachRequested(ModuleBase* module) {
     qDebug() << "[MainWindow] Reattach requested for:" << module->moduleTitle();
-
-    // 从独立窗口列表移除
-    m_detachedModules.removeAll(module);
 
     // 获取当前鼠标位置
     QPoint mouseGlobalPos = QCursor::pos();
@@ -213,8 +221,8 @@ void MainWindow::onModuleReattachRequested(ModuleBase* module) {
     if (targetSlot >= 0) {
         // 找到了具体的可见槽位
         if (!m_slots[targetSlot].module) {
-            // 槽位为空，直接放入
-            qDebug() << "[MainWindow] Placing module in target visible slot:" << targetSlot;
+            // 槽位为空，附着到此槽位
+            qDebug() << "[MainWindow] Attaching module to slot:" << targetSlot;
             placeModuleInSlot(module, targetSlot);
         } else {
             // 槽位已占用，查找其他可见的空槽位
@@ -223,10 +231,9 @@ void MainWindow::onModuleReattachRequested(ModuleBase* module) {
                 qDebug() << "[MainWindow] Target slot occupied, using empty visible slot:" << emptySlot;
                 placeModuleInSlot(module, emptySlot);
             } else {
-                // 没有可见的空槽位，保持独立状态
-                qDebug() << "[MainWindow] No visible empty slots, module stays detached";
-                module->setDetachedState(true);
-                m_detachedModules.append(module);
+                // 没有可见的空槽位，保持自由状态
+                qDebug() << "[MainWindow] No visible empty slots, module stays free";
+                // 不需要做任何事，模块保持当前位置
             }
         }
     } else {
@@ -238,22 +245,18 @@ void MainWindow::onModuleReattachRequested(ModuleBase* module) {
         scrollAreaRect = scrollAreaRect.adjusted(-50, -50, 50, 50);
 
         if (scrollAreaRect.contains(scrollAreaLocalPos)) {
-            // 在白板附近，找个可见的空槽位放进去
+            // 在白板附近，找个可见的空槽位附着
             int emptySlot = findEmptyVisibleSlot();
             if (emptySlot >= 0) {
-                qDebug() << "[MainWindow] Near board area, placing in empty visible slot:" << emptySlot;
+                qDebug() << "[MainWindow] Near board area, attaching to empty visible slot:" << emptySlot;
                 placeModuleInSlot(module, emptySlot);
             } else {
-                // 没有可见的空槽位，保持独立状态
-                qDebug() << "[MainWindow] Near board but no visible slots, module stays detached";
-                module->setDetachedState(true);
-                m_detachedModules.append(module);
+                // 没有可见的空槽位，保持自由状态
+                qDebug() << "[MainWindow] Near board but no visible slots, module stays free";
             }
         } else {
-            // 远离白板区域，保持独立状态
-            qDebug() << "[MainWindow] Module stays detached (far from board)";
-            module->setDetachedState(true);
-            m_detachedModules.append(module);
+            // 远离白板区域，保持自由状态
+            qDebug() << "[MainWindow] Module stays free (far from board)";
         }
     }
 
@@ -263,9 +266,7 @@ void MainWindow::onModuleReattachRequested(ModuleBase* module) {
     }
 
     // 确保足够的空槽位
-    if (!m_detachedModules.contains(module)) {
-        ensureMinimumSlots();
-    }
+    ensureMinimumSlots();
 }
 
 void MainWindow::onModuleCloseRequested(ModuleBase* module) {
@@ -334,18 +335,21 @@ void MainWindow::placeModuleInSlot(ModuleBase* module, int slotIndex) {
         removeModuleFromSlot(slot.module);
     }
 
+    // 新架构：模块仍是独立窗口，只是附着到槽位
     slot.module = module;
-    module->setDetachedState(false);
 
-    // 替换占位符
-    QVBoxLayout* slotLayout = qobject_cast<QVBoxLayout*>(slot.widget->layout());
-    if (slotLayout) {
-        slotLayout->removeWidget(slot.placeholder);
-        slot.placeholder->hide();
-        slotLayout->addWidget(module);
-    }
+    // 更新槽位全局矩形
+    updateSlotGeometries();
 
-    qDebug() << "[MainWindow] Module" << module->moduleTitle() << "placed in slot" << slotIndex;
+    // 让模块附着到这个槽位
+    module->attachToSlot(slot.globalRect);
+
+    // 更新占位符文字
+    slot.placeholder->setText("已占用");
+    slot.placeholder->setStyleSheet("color: #999; font-style: italic;");
+
+    qDebug() << "[MainWindow] Module" << module->moduleTitle() << "attached to slot" << slotIndex
+             << "at" << slot.globalRect;
 }
 
 void MainWindow::removeModuleFromSlot(ModuleBase* module) {
@@ -354,16 +358,12 @@ void MainWindow::removeModuleFromSlot(ModuleBase* module) {
             Slot& slot = m_slots[i];
             slot.module = nullptr;
 
-            // 从布局中移除模块
-            QVBoxLayout* slotLayout = qobject_cast<QVBoxLayout*>(slot.widget->layout());
-            if (slotLayout) {
-                slotLayout->removeWidget(module);
-                module->setParent(nullptr);
+            // 新架构：模块分离
+            module->detachFromSlot();
 
-                // 重新显示占位符
-                slotLayout->addWidget(slot.placeholder);
-                slot.placeholder->show();
-            }
+            // 恢复占位符文字
+            slot.placeholder->setText("Empty Slot");
+            slot.placeholder->setStyleSheet("color: #999; font-style: italic;");
 
             qDebug() << "[MainWindow] Module removed from slot" << i;
             break;
@@ -470,4 +470,86 @@ void MainWindow::ensureMinimumSlots() {
     }
 
     qDebug() << "[MainWindow] Ensured" << emptySlots << "empty slots available";
+}
+// 新架构：更新槽位的全局几何信息
+void MainWindow::updateSlotGeometries() {
+    for (int i = 0; i < m_slots.size(); ++i) {
+        Slot& slot = m_slots[i];
+
+        // 获取槽位widget在屏幕上的全局矩形
+        QPoint globalPos = slot.widget->mapToGlobal(QPoint(0, 0));
+        QSize size = slot.widget->size();
+        slot.globalRect = QRect(globalPos, size);
+    }
+}
+
+// 更新所有附着模块的位置和大小
+void MainWindow::updateAttachedModules() {
+    for (int i = 0; i < m_slots.size(); ++i) {
+        Slot& slot = m_slots[i];
+        if (slot.module && slot.module->isAttached()) {
+            // 获取窗口框架信息
+            QRect frameRect = slot.module->frameGeometry();
+            QRect contentRect = slot.module->geometry();
+
+            // 计算框架的额外尺寸
+            int frameTopHeight = frameRect.y() - contentRect.y();
+            int frameBottomHeight = (frameRect.height() - contentRect.height()) - abs(frameTopHeight);
+            int frameLeftWidth = contentRect.x() - frameRect.x();
+            int frameRightWidth = (frameRect.width() - contentRect.width()) - abs(frameLeftWidth);
+
+            // 修正为绝对值
+            frameTopHeight = abs(frameTopHeight);
+            frameLeftWidth = abs(frameLeftWidth);
+
+            // 计算内容区域的目标大小（槽位大小减去框架）
+            QSize targetContentSize(
+                slot.globalRect.width() - frameLeftWidth - frameRightWidth,
+                slot.globalRect.height() - frameTopHeight - frameBottomHeight
+            );
+
+            // 窗口位置：槽位位置就是窗口框架的左上角位置
+            QPoint targetPos = slot.globalRect.topLeft();
+
+            // 先更新大小限制，允许模块跟随槽位变化
+            slot.module->setMaximumSize(targetContentSize);
+            slot.module->setMinimumSize(targetContentSize);
+
+            // 先设置大小
+            slot.module->resize(targetContentSize);
+
+            // 再移动到目标位置
+            slot.module->move(targetPos);
+        }
+    }
+}
+
+// 监听白板窗口的resize事件
+void MainWindow::resizeEvent(QResizeEvent *event) {
+    QMainWindow::resizeEvent(event);
+
+    // 立即更新槽位和模块（不延迟，实时响应）
+    updateSlotGeometries();
+    updateAttachedModules();
+}
+
+// 监听白板窗口的move事件
+void MainWindow::moveEvent(QMoveEvent *event) {
+    QMainWindow::moveEvent(event);
+
+    // 立即更新槽位和模块位置（不延迟，实时跟随）
+    updateSlotGeometries();
+    updateAttachedModules();
+}
+
+// 事件过滤器：监听scrollArea的滚动事件
+bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
+    if (obj == m_scrollArea) {
+        if (event->type() == QEvent::Resize) {
+            // scrollArea大小改变时立即更新
+            updateSlotGeometries();
+            updateAttachedModules();
+        }
+    }
+    return QMainWindow::eventFilter(obj, event);
 }

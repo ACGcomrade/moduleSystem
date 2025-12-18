@@ -27,6 +27,11 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+protected:
+    void resizeEvent(QResizeEvent *event) override;
+    void moveEvent(QMoveEvent *event) override;
+    bool eventFilter(QObject *obj, QEvent *event) override;
+
 private slots:
     // 模块创建
     void onCreateExampleModule();
@@ -60,11 +65,12 @@ private:
     QWidget* m_boardWidget;
     QHBoxLayout* m_boardLayout;
 
-    // 动态槽位管理
+    // 动态槽位管理（新架构：槽位只是占位符，不包含实际widget）
     struct Slot {
-        QWidget* widget;
-        QLabel* placeholder;
-        ModuleBase* module;
+        QWidget* widget;        // 槽位占位符widget
+        QLabel* placeholder;    // 显示"空槽位"或"已占用"的标签
+        ModuleBase* module;     // 吸附到此槽位的模块（模块仍是独立窗口）
+        QRect globalRect;       // 槽位在屏幕上的全局矩形
     };
     QList<Slot> m_slots;  // 动态槽位列表
     static const int MIN_SLOTS = 3;  // 最少保持3个空槽位
@@ -74,8 +80,14 @@ private:
     // 模块管理
     ModuleManager* m_moduleManager;
 
-    // 独立窗口列表
-    QList<ModuleBase*> m_detachedModules;
+    // 所有模块列表（所有模块都是独立窗口）
+    QList<ModuleBase*> m_allModules;
+
+    // 更新槽位的全局位置
+    void updateSlotGeometries();
+
+    // 更新所有附着模块的位置和大小
+    void updateAttachedModules();
 };
 
 #endif // MAINWINDOW_H

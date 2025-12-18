@@ -50,8 +50,13 @@ public:
     virtual void clear() = 0;
     virtual QWidget* contentWidget() = 0;
 
-    // Public method to set detached state
-    void setDetachedState(bool detached, const QPoint& globalMousePos = QPoint()) { setDetached(detached, globalMousePos); }
+    // 新架构：附着/分离状态管理
+    void attachToSlot(const QRect& slotGlobalRect);  // 附着到槽位
+    void detachFromSlot();                            // 从槽位分离
+    bool isAttached() const { return m_isAttached; }
+
+    // 移动到指定全局位置
+    void moveToGlobalPos(const QPoint& globalPos);
 
 signals:
     void detachRequested(ModuleBase* module);
@@ -67,8 +72,6 @@ protected:
     void moveEvent(QMoveEvent *event) override;
     bool event(QEvent *event) override;
 
-    void setDetached(bool detached, const QPoint& globalMousePos = QPoint());
-
 private slots:
     void onMoveTimeout();
 
@@ -76,12 +79,13 @@ private:
     ModuleType m_type;
     QString m_title;
     int m_id;
-    bool m_isDetached;
+    bool m_isAttached;            // 是否附着到槽位（新架构）
+    QRect m_attachedSlotRect;     // 附着的槽位全局矩形
 
     // 拖拽相关
-    bool m_dragging;              // 内容区域拖拽标志
+    bool m_dragging;              // 用户拖拽标志
     bool m_titleBarDragging;      // 标题栏拖拽标志（Qt系统拖动）
-    QPoint m_dragStartPos;
+    QPoint m_dragStartPos;        // 拖拽起始位置（相对widget）
     QPoint m_lastPos;             // 记录上一次位置，用于检测移动
     QTimer* m_moveTimer;          // 检测移动停止的定时器
     QPoint m_lastMoveEventPos;    // 记录moveEvent的上一次位置

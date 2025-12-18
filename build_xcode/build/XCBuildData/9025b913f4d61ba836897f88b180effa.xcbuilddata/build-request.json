@@ -13,7 +13,7 @@
   "continueBuildingAfterErrors" : false,
   "dependencyScope" : "workspace",
   "enableIndexBuildArena" : false,
-  "hideShellScriptEnvironment" : true,
+  "hideShellScriptEnvironment" : false,
   "parameters" : {
     "action" : "build",
     "configurationName" : "Debug",
@@ -36,5 +36,5 @@
   "useDryRun" : false,
   "useImplicitDependencies" : false,
   "useLegacyBuildLocations" : false,
-  "useParallelTargets" : true
+  "useParallelTargets" : false
 }
