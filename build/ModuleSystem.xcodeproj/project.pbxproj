@@ -9,7 +9,7 @@
 /* Begin PBXAggregateTarget section */
 		2A49F2484D76C10EF714B2C4 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = B4B86CA6FB024AA0A4B91705 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 466F446570704D22900CBE6F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				9D722A42C7D24554579D8B22 /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -20,38 +20,38 @@
 		};
 		65C6AC25FE9701028DF15DCC /* test_modules_autogen */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = CFFA0486A1F44E36BBDED7D2 /* Build configuration list for PBXAggregateTarget "test_modules_autogen" */;
+			buildConfigurationList = 2719A64C94174A4DA3968873 /* Build configuration list for PBXAggregateTarget "test_modules_autogen" */;
 			buildPhases = (
 				4BB78B61E43BD2B3CC54CCE7 /* Generate CMakeFiles/test_modules_autogen */,
 			);
 			dependencies = (
-				E5A498670C71463982F3030C /* PBXTargetDependency */,
+				EF4D6B49F76342AC87CFF62F /* PBXTargetDependency */,
 			);
 			name = test_modules_autogen;
 			productName = test_modules_autogen;
 		};
 		9BE0D8804998A4079659D8B9 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 4C6158680D0F4DF48EC2D2C9 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = E0FE06A050EC41948DDD800E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
 				5ACA51E484B4A04218118367 /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
-				6E21AA00594E47C2B9D4C08D /* PBXTargetDependency */,
-				B25C84DD0E194920A4CD9077 /* PBXTargetDependency */,
-				CDF53B4535E84C80AE7EF877 /* PBXTargetDependency */,
+				8522D6CE83CA40FE96D077BA /* PBXTargetDependency */,
+				008ACC1826074FBC9AAC13DF /* PBXTargetDependency */,
+				A91450738E154B458ACF602A /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		F777B664748EE31B9B3A049C /* ModuleSystem_autogen */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 8B18387CC1D8465697E05465 /* Build configuration list for PBXAggregateTarget "ModuleSystem_autogen" */;
+			buildConfigurationList = 37734714B195452089DB508E /* Build configuration list for PBXAggregateTarget "ModuleSystem_autogen" */;
 			buildPhases = (
 				5EE5549E3E66BF94B2263565 /* Generate CMakeFiles/ModuleSystem_autogen */,
 			);
 			dependencies = (
-				4CB70089B4B4448CB2CAAC0C /* PBXTargetDependency */,
+				03D5ED851B4444D29E31EE9B /* PBXTargetDependency */,
 			);
 			name = ModuleSystem_autogen;
 			productName = ModuleSystem_autogen;
@@ -59,62 +59,63 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		02C7634E2A0740F69A286A90 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = FC0F759E1BCE4153ABE53F59 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */; };
-		0771EC8E4E09416FB79BE332 /* /opt/homebrew/lib/QtWidgets.framework */ = {isa = PBXBuildFile; fileRef = 44A648C4456A4D739BFAFE81 /* /opt/homebrew/lib/QtWidgets.framework */; };
-		0F18BAAEFA7143B39A303602 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */ = {isa = PBXBuildFile; fileRef = 6F4C4D6C48CE41A7A0CFA193 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */; };
-		2588D12B040F41018A458F7D /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */ = {isa = PBXBuildFile; fileRef = 8FCBEBD1708E4CD983D417DA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */; };
-		268C528DA4D742F9BD8553BF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */ = {isa = PBXBuildFile; fileRef = 112D0898230B4B389C898A64 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */; };
-		2EC8302C72D5440CA24544DF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */ = {isa = PBXBuildFile; fileRef = 9512DE954ADF46E184B77E53 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */; };
-		311BDF17C11046CBAF7480FE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */ = {isa = PBXBuildFile; fileRef = 6A2A58D80F40475CB26B001E /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */; };
-		333A5523F3474A5BA8FF7BB2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 85ADE8068DCA4F9CB83D3843 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */; };
-		6DC37E2BD876493FAAD1B61F /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */ = {isa = PBXBuildFile; fileRef = 5264ACC0D43540BF845F5C35 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */; };
-		7023218F89DD45958C283166 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */ = {isa = PBXBuildFile; fileRef = 467642DEE554423E94202E0A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */; };
-		7080F0A7B6BA4006B2A65EB9 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 56F075FAC9E641C680AC7E7E /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */; };
-		762EC78E2B2242649E6A338B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/MainWindow.h */ = {isa = PBXBuildFile; fileRef = 92C67B3275E34726A5A4E093 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/MainWindow.h */; };
-		7F17C33C9325401FBBAC0436 /* /opt/homebrew/lib/QtCore.framework */ = {isa = PBXBuildFile; fileRef = 1CE484DAB9A84BD1B0190E1F /* /opt/homebrew/lib/QtCore.framework */; };
-		A6D740CADF974C1883E95257 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */ = {isa = PBXBuildFile; fileRef = 37903968C076412BBB6D5F5A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */; };
-		B13DF039A4CC4E9185B7E458 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */ = {isa = PBXBuildFile; fileRef = 4CEB5C42F19F41719E90D796 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */; };
-		BA4D307CDD554A15A90431C3 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */ = {isa = PBXBuildFile; fileRef = 33ABF87856B8485C8E9DC24A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */; };
-		BEB491B2CD9F40B9ABCC8E22 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CalculatorModule.h */ = {isa = PBXBuildFile; fileRef = DE6D695743AD41FF88A92502 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CalculatorModule.h */; };
-		C0C8CA414EF54CA8BEAD5987 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */ = {isa = PBXBuildFile; fileRef = 710E38CA4FBC4E5D87994E36 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */; };
-		C48B6A6C10214A44863D4AD7 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CalculatorModule.h */ = {isa = PBXBuildFile; fileRef = 5387AF0ED93746A69A758418 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CalculatorModule.h */; };
-		C79349EA352346F79BC02A86 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */ = {isa = PBXBuildFile; fileRef = F6901CD884674718889FC4E1 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */; };
-		CC2199E11FD14E5AAE1490F1 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */ = {isa = PBXBuildFile; fileRef = C3BDC4071DED4FBC8A72AB32 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */; };
-		CE2E9149C09C486985ADE74B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */ = {isa = PBXBuildFile; fileRef = CCF163DF431E44D1999E8BFD /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */; };
-		CEE46B9A529C4A4783FC1BD4 /* /opt/homebrew/lib/QtGui.framework */ = {isa = PBXBuildFile; fileRef = 7B3D466D9D754BA9B9FD8B5A /* /opt/homebrew/lib/QtGui.framework */; };
-		D51D1293F62C46DAA0A42D8A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */ = {isa = PBXBuildFile; fileRef = 400F8A4FCEE647159D670478 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */; };
-		D9989844BBD54EFABDA3F787 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */ = {isa = PBXBuildFile; fileRef = 6C4E5BD771BB41D19A8E8498 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */; };
-		DC4094B1FAD047C89F840F26 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */ = {isa = PBXBuildFile; fileRef = F12A3F2BE486455886E8E6BF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */; };
-		E39623C5B5204D37B6E1A875 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */ = {isa = PBXBuildFile; fileRef = 57CB65BAE73B41FF841CE362 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */; };
-		F46775B6368A4C248FA30957 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 35142B2DDFDF4FF09D300381 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */; };
-		F494D48648EA4547BE95EF9E /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */ = {isa = PBXBuildFile; fileRef = 0D971C3CC01A42348841F286 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */; };
-		FB405C619BF148B492C6A6CB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */ = {isa = PBXBuildFile; fileRef = 64D38EEE2F174DBE991192AE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */; };
-		FFBB6DEA445642669C49DCD5 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 14EEEAA2D5244D5DA7161448 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */; };
+		027479ED4EB34BB6AEB1E803 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */ = {isa = PBXBuildFile; fileRef = A16927AACC2A439097B5D5EE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */; };
+		11AA62ADADDD4A08AE74B344 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/ResizableSlotWidget.cpp */ = {isa = PBXBuildFile; fileRef = 31F757BDD29543E2A7AF13CA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/ResizableSlotWidget.cpp */; };
+		1A69D1738F5E4B588B77F7E8 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */ = {isa = PBXBuildFile; fileRef = 5786C51C989347E18B1F5BD5 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */; };
+		1D3D45BBB510444B9351E508 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */ = {isa = PBXBuildFile; fileRef = 063CA0EC7E89471FBA9C8A7F /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */; };
+		260668B41DBD49F892F392D2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */ = {isa = PBXBuildFile; fileRef = AE47FBB41DF4417D84315203 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */; };
+		3625979464ED46FCA18B77AA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */ = {isa = PBXBuildFile; fileRef = FDEA27F4DEDD4428A76EF274 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */; };
+		369BAF401F6443D8881A5CDF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem.dir/Info.plist */ = {isa = PBXBuildFile; fileRef = 7D5AB680B48240FA902690F2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem.dir/Info.plist */; };
+		37281607F87A4BBDB54326C2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */ = {isa = PBXBuildFile; fileRef = 8A52EC19211548F7A2A10C18 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */; };
+		4023C5F07B4A4F8FB8D21F12 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/ResizableSlotWidget.h */ = {isa = PBXBuildFile; fileRef = BDC09D85B6204AC2B39F366C /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/ResizableSlotWidget.h */; };
+		42DB6687193044508A27FB5C /* /opt/homebrew/lib/QtGui.framework */ = {isa = PBXBuildFile; fileRef = 4C73BB5015234EFEA05D7801 /* /opt/homebrew/lib/QtGui.framework */; };
+		46E0F7012A294C3AB462E2A6 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 8F86A4D9EDB0483CB17C78BE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */; };
+		4F1C1BA858F94DC4B915ADA3 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 110AE44208B14371A10A5FAD /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */; };
+		5E3485D742014C4880645DD9 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/PerformanceMonitor.h */ = {isa = PBXBuildFile; fileRef = C56FE998F3F343228C945378 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/PerformanceMonitor.h */; };
+		620CC8DF21134748A9314705 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */ = {isa = PBXBuildFile; fileRef = 2395D86B0E6C48629C6E94FB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */; };
+		64D2F0BA849D4356A6AB907B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */ = {isa = PBXBuildFile; fileRef = AF249A2AB9684C9BB140D810 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */; };
+		6A2A6FD4C3654DD0A1C67729 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */ = {isa = PBXBuildFile; fileRef = 81759D87A23D4FB4B3E5A7EC /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */; };
+		6C8EB66DE6DF4CFB80849429 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */ = {isa = PBXBuildFile; fileRef = 3B1334EBD2B5441893F330DA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */; };
+		83D3A0D4BBD94ECC9D3533BF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */ = {isa = PBXBuildFile; fileRef = 22DBC178C24F430A9D4EA3C3 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */; };
+		91B88081F69C414DA953DF29 /* /opt/homebrew/lib/QtCore.framework */ = {isa = PBXBuildFile; fileRef = DF19B6404E5D40FE956A9DFC /* /opt/homebrew/lib/QtCore.framework */; };
+		9A9AE7B9BA3F4B6CA00426B9 /* /opt/homebrew/lib/QtWidgets.framework */ = {isa = PBXBuildFile; fileRef = 6F34D53D84F04714B0A1E95E /* /opt/homebrew/lib/QtWidgets.framework */; };
+		A830F85491AE4229A329F333 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */ = {isa = PBXBuildFile; fileRef = 9E3E3A86227D41D7B62223DC /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */; };
+		AEA35DA2178A4262AC897497 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 89F04CDB7B084FB494DA550B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */; };
+		B4DC8B346E2545428FEEB020 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/PerformanceMonitor.cpp */ = {isa = PBXBuildFile; fileRef = 780B5BDD00A64D49B54203BF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/PerformanceMonitor.cpp */; };
+		BA58276ABD80436CBF9A6E45 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */ = {isa = PBXBuildFile; fileRef = AAAD663FF8124E699B8E5338 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */; };
+		BD338C981E934F23A496FCAB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */ = {isa = PBXBuildFile; fileRef = E6BFDBB0CE174B09A431E873 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */; };
+		C3D86808EA444330900E8CA4 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/MainWindow.h */ = {isa = PBXBuildFile; fileRef = 9C1106662E0941128E2EF9F6 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/MainWindow.h */; };
+		C61240F09B5F46428924BC6D /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */ = {isa = PBXBuildFile; fileRef = 9AE3F8A58B99485CB9987C7B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */; };
+		D2DAD99C71D045289D903399 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */ = {isa = PBXBuildFile; fileRef = 43CBBDA43717469AB1195678 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */; };
+		EDCD5B48263847628DC2657A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */ = {isa = PBXBuildFile; fileRef = 5D08E05F66674B6285B07D07 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */; };
+		EF14F4EFC8D6493680FDB9DB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */ = {isa = PBXBuildFile; fileRef = B64C7E65D141479BADBC52AB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */; };
+		F0D0A3C7E3E4422B99300DDE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */ = {isa = PBXBuildFile; fileRef = 8AED676DA8DD4989B4007BD7 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */; };
+		FA6092F38CFD4CDDAEBA818A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 92EB646DD87749D6AC91BEC8 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		1BCA3BAE08F741E18C242BFF /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		AB5E4CEE6C834667961D6CE8 /* RelWithDebInfo */ = {
+		2FD8BB2DA0C34FDB864FBA22 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
-		B276624BF8CE45DB8009CDD9 /* MinSizeRel */ = {
+		6C4A141115E3440F81323872 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		7E87A6B206B14C6C80A1D55B /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
-		FFFE46AF03D8445B9E2C3804 /* Debug */ = {
+		D799D22F58B04F40B9619C2D /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -124,119 +125,120 @@
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		12E918EF8BAF429089A429E3 /* PBXContainerItemProxy */ = {
+		17233E631A524F5591979C78 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2A49F2484D76C10EF714B2C4;
 			remoteInfo = ZERO_CHECK;
 		};
-		1840D75879354FD484A80145 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A49F2484D76C10EF714B2C4;
-			remoteInfo = ZERO_CHECK;
-		};
-		868C4149F59045BE8FC42273 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A49F2484D76C10EF714B2C4;
-			remoteInfo = ZERO_CHECK;
-		};
-		9FE8B0A6105A49B285C96934 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65C6AC25FE9701028DF15DCC;
-			remoteInfo = test_modules_autogen;
-		};
-		AF447FD9A53E467DBD794E06 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 84598D00F515292F5439D843;
-			remoteInfo = ModuleSystem;
-		};
-		BF76248998C0494F9D934EFE /* PBXContainerItemProxy */ = {
+		432044A1E9454FDDAF633C02 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F777B664748EE31B9B3A049C;
 			remoteInfo = ModuleSystem_autogen;
 		};
-		C109E3858ED041F0BF5ED923 /* PBXContainerItemProxy */ = {
+		4B858F3A17424039BA410535 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84598D00F515292F5439D843;
+			remoteInfo = ModuleSystem;
+		};
+		7F3FA74760A74692A6D1CB76 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5E8CC2BA43DD0D1EE7B163E6;
 			remoteInfo = test_modules;
 		};
-		DEFAFD15882B45FE8D9C4B9E /* PBXContainerItemProxy */ = {
+		A3EEC431A6AB47DC8B2C8C62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2A49F2484D76C10EF714B2C4;
 			remoteInfo = ZERO_CHECK;
 		};
-		E951A9CF1C3D4A81BD0BDF9F /* PBXContainerItemProxy */ = {
+		DE4EA5E530C9471691908183 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2A49F2484D76C10EF714B2C4;
 			remoteInfo = ZERO_CHECK;
+		};
+		E9496D8817454F368A28AD9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A49F2484D76C10EF714B2C4;
+			remoteInfo = ZERO_CHECK;
+		};
+		F02127E2E4C04B2C923412B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A49F2484D76C10EF714B2C4;
+			remoteInfo = ZERO_CHECK;
+		};
+		F83AA881E85B45F3A0B84DEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5D966408A2F48D89DD5C93A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65C6AC25FE9701028DF15DCC;
+			remoteInfo = test_modules_autogen;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D971C3CC01A42348841F286 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ExampleModule.cpp; path = src/modules/ExampleModule.cpp; sourceTree = SOURCE_ROOT; };
-		112D0898230B4B389C898A64 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CalculatorModule.cpp; path = src/modules/CalculatorModule.cpp; sourceTree = SOURCE_ROOT; };
-		14EEEAA2D5244D5DA7161448 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = build/test_modules_autogen/mocs_compilation.cpp; sourceTree = SOURCE_ROOT; };
-		1CE484DAB9A84BD1B0190E1F /* /opt/homebrew/lib/QtCore.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /opt/homebrew/lib/QtCore.framework; sourceTree = "<absolute>"; };
-		33ABF87856B8485C8E9DC24A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ModuleManager.cpp; path = src/modules/ModuleManager.cpp; sourceTree = SOURCE_ROOT; };
-		35142B2DDFDF4FF09D300381 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		37903968C076412BBB6D5F5A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CustomModuleTemplate.h; path = include/modules/CustomModuleTemplate.h; sourceTree = SOURCE_ROOT; };
-		400F8A4FCEE647159D670478 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CustomModuleTemplate.cpp; path = src/modules/CustomModuleTemplate.cpp; sourceTree = SOURCE_ROOT; };
-		44A648C4456A4D739BFAFE81 /* /opt/homebrew/lib/QtWidgets.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = /opt/homebrew/lib/QtWidgets.framework; sourceTree = "<absolute>"; };
-		467642DEE554423E94202E0A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CalculatorModule.cpp; path = src/modules/CalculatorModule.cpp; sourceTree = SOURCE_ROOT; };
-		4CEB5C42F19F41719E90D796 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ExampleModule.cpp; path = src/modules/ExampleModule.cpp; sourceTree = SOURCE_ROOT; };
-		5264ACC0D43540BF845F5C35 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ModuleBase.cpp; path = src/modules/ModuleBase.cpp; sourceTree = SOURCE_ROOT; };
-		5387AF0ED93746A69A758418 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CalculatorModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CalculatorModule.h; path = include/modules/CalculatorModule.h; sourceTree = SOURCE_ROOT; };
-		56F075FAC9E641C680AC7E7E /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = build/ModuleSystem_autogen/mocs_compilation.cpp; sourceTree = SOURCE_ROOT; };
-		57CB65BAE73B41FF841CE362 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ExampleModule.h; path = include/modules/ExampleModule.h; sourceTree = SOURCE_ROOT; };
-		64D38EEE2F174DBE991192AE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CustomModuleTemplate.h; path = include/modules/CustomModuleTemplate.h; sourceTree = SOURCE_ROOT; };
-		6A2A58D80F40475CB26B001E /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ModuleBase.cpp; path = src/modules/ModuleBase.cpp; sourceTree = SOURCE_ROOT; };
-		6C4E5BD771BB41D19A8E8498 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ModuleBase.h; path = include/modules/ModuleBase.h; sourceTree = SOURCE_ROOT; };
-		6F4C4D6C48CE41A7A0CFA193 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ModuleManager.h; path = include/modules/ModuleManager.h; sourceTree = SOURCE_ROOT; };
-		710E38CA4FBC4E5D87994E36 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ExampleModule.h; path = include/modules/ExampleModule.h; sourceTree = SOURCE_ROOT; };
-		752B40C29A2F416E8B50A4E8 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		7B3D466D9D754BA9B9FD8B5A /* /opt/homebrew/lib/QtGui.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /opt/homebrew/lib/QtGui.framework; sourceTree = "<absolute>"; };
-		82CA7EBFDC404C55BF721528 /* test_modules */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_modules; sourceTree = BUILT_PRODUCTS_DIR; };
-		85ADE8068DCA4F9CB83D3843 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		8FCBEBD1708E4CD983D417DA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ModuleManager.cpp; path = src/modules/ModuleManager.cpp; sourceTree = SOURCE_ROOT; };
-		90A5BCF2D213446980A2EAF9 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		92C67B3275E34726A5A4E093 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/MainWindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MainWindow.h; path = include/MainWindow.h; sourceTree = SOURCE_ROOT; };
-		9512DE954ADF46E184B77E53 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ModuleManager.h; path = include/modules/ModuleManager.h; sourceTree = SOURCE_ROOT; };
-		BA322FD6D4E3496EB48DB80D /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		C3BDC4071DED4FBC8A72AB32 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MainWindow.cpp; path = src/MainWindow.cpp; sourceTree = SOURCE_ROOT; };
-		CCF163DF431E44D1999E8BFD /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ModuleBase.h; path = include/modules/ModuleBase.h; sourceTree = SOURCE_ROOT; };
-		DE6D695743AD41FF88A92502 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CalculatorModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CalculatorModule.h; path = include/modules/CalculatorModule.h; sourceTree = SOURCE_ROOT; };
-		ED2A345D962C445B8041EB6F /* ModuleSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = ModuleSystem; sourceTree = BUILT_PRODUCTS_DIR; };
-		F12A3F2BE486455886E8E6BF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_modules.cpp; path = src/test_modules.cpp; sourceTree = SOURCE_ROOT; };
-		F6901CD884674718889FC4E1 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CustomModuleTemplate.cpp; path = src/modules/CustomModuleTemplate.cpp; sourceTree = SOURCE_ROOT; };
-		FC0F759E1BCE4153ABE53F59 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		063CA0EC7E89471FBA9C8A7F /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ExampleModule.h; path = include/modules/ExampleModule.h; sourceTree = SOURCE_ROOT; };
+		0A6EC71359D04FE0AB78CEA1 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		110AE44208B14371A10A5FAD /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = build/ModuleSystem_autogen/mocs_compilation.cpp; sourceTree = SOURCE_ROOT; };
+		22DBC178C24F430A9D4EA3C3 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CustomModuleTemplate.h; path = include/modules/CustomModuleTemplate.h; sourceTree = SOURCE_ROOT; };
+		2395D86B0E6C48629C6E94FB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ModuleManager.h; path = include/modules/ModuleManager.h; sourceTree = SOURCE_ROOT; };
+		31F757BDD29543E2A7AF13CA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/ResizableSlotWidget.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ResizableSlotWidget.cpp; path = src/ResizableSlotWidget.cpp; sourceTree = SOURCE_ROOT; };
+		3B1334EBD2B5441893F330DA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MainWindow.cpp; path = src/MainWindow.cpp; sourceTree = SOURCE_ROOT; };
+		43CBBDA43717469AB1195678 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ModuleBase.h; path = include/modules/ModuleBase.h; sourceTree = SOURCE_ROOT; };
+		4C73BB5015234EFEA05D7801 /* /opt/homebrew/lib/QtGui.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /opt/homebrew/lib/QtGui.framework; sourceTree = "<absolute>"; };
+		5786C51C989347E18B1F5BD5 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CustomModuleTemplate.cpp; path = src/modules/CustomModuleTemplate.cpp; sourceTree = SOURCE_ROOT; };
+		5D08E05F66674B6285B07D07 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CustomModuleTemplate.h; path = include/modules/CustomModuleTemplate.h; sourceTree = SOURCE_ROOT; };
+		6F34D53D84F04714B0A1E95E /* /opt/homebrew/lib/QtWidgets.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = /opt/homebrew/lib/QtWidgets.framework; sourceTree = "<absolute>"; };
+		780B5BDD00A64D49B54203BF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/PerformanceMonitor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PerformanceMonitor.cpp; path = src/PerformanceMonitor.cpp; sourceTree = SOURCE_ROOT; };
+		793B94E2120743A686C57FC2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		798504BE1D184D53A853FE76 /* ModuleSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = ModuleSystem; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5AB680B48240FA902690F2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem.dir/Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; name = Info.plist; path = build/CMakeFiles/ModuleSystem.dir/Info.plist; sourceTree = SOURCE_ROOT; };
+		81759D87A23D4FB4B3E5A7EC /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ExampleModule.h; path = include/modules/ExampleModule.h; sourceTree = SOURCE_ROOT; };
+		89F04CDB7B084FB494DA550B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = build/test_modules_autogen/mocs_compilation.cpp; sourceTree = SOURCE_ROOT; };
+		8A52EC19211548F7A2A10C18 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ModuleBase.cpp; path = src/modules/ModuleBase.cpp; sourceTree = SOURCE_ROOT; };
+		8AED676DA8DD4989B4007BD7 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ModuleManager.cpp; path = src/modules/ModuleManager.cpp; sourceTree = SOURCE_ROOT; };
+		8F86A4D9EDB0483CB17C78BE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		92EB646DD87749D6AC91BEC8 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9AE3F8A58B99485CB9987C7B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_modules.cpp; path = src/test_modules.cpp; sourceTree = SOURCE_ROOT; };
+		9C1106662E0941128E2EF9F6 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/MainWindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MainWindow.h; path = include/MainWindow.h; sourceTree = SOURCE_ROOT; };
+		9E3E3A86227D41D7B62223DC /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ExampleModule.cpp; path = src/modules/ExampleModule.cpp; sourceTree = SOURCE_ROOT; };
+		A16927AACC2A439097B5D5EE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ExampleModule.cpp; path = src/modules/ExampleModule.cpp; sourceTree = SOURCE_ROOT; };
+		AAAD663FF8124E699B8E5338 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ModuleBase.cpp; path = src/modules/ModuleBase.cpp; sourceTree = SOURCE_ROOT; };
+		AE19D837F7B04C519931EADC /* test_modules */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = test_modules; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE47FBB41DF4417D84315203 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		AF249A2AB9684C9BB140D810 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ModuleManager.cpp; path = src/modules/ModuleManager.cpp; sourceTree = SOURCE_ROOT; };
+		B64C7E65D141479BADBC52AB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CustomModuleTemplate.cpp; path = src/modules/CustomModuleTemplate.cpp; sourceTree = SOURCE_ROOT; };
+		BDC09D85B6204AC2B39F366C /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/ResizableSlotWidget.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ResizableSlotWidget.h; path = include/ResizableSlotWidget.h; sourceTree = SOURCE_ROOT; };
+		C56FE998F3F343228C945378 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/PerformanceMonitor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PerformanceMonitor.h; path = include/PerformanceMonitor.h; sourceTree = SOURCE_ROOT; };
+		C96C24CA726344F79843007D /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DF19B6404E5D40FE956A9DFC /* /opt/homebrew/lib/QtCore.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /opt/homebrew/lib/QtCore.framework; sourceTree = "<absolute>"; };
+		E6BFDBB0CE174B09A431E873 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ModuleManager.h; path = include/modules/ModuleManager.h; sourceTree = SOURCE_ROOT; };
+		FDEA27F4DEDD4428A76EF274 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ModuleBase.h; path = include/modules/ModuleBase.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		259179F178C543C2B742351D /* Frameworks */ = {
+		60391FFF62FE44059DBB3507 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		483522595EC842BF9D96EDC0 /* Frameworks */ = {
+		C31B3F22D50240FE8439CB1A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,166 +248,175 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		044A5BD45E8C4AEC9C544EBA /* CMake Rules */ = {
+		02C65FAF045142FD92C76B28 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		0DB75830FA164ECCA4DD4912 /* Products */ = {
+		211BCD42F95B47E98369705C /* test_modules_autogen */ = {
 			isa = PBXGroup;
 			children = (
-				ED2A345D962C445B8041EB6F /* ModuleSystem */,
-				82CA7EBFDC404C55BF721528 /* test_modules */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2C2E54E4EFE4439B83647BBB /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				14EEEAA2D5244D5DA7161448 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */,
-				467642DEE554423E94202E0A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */,
-				F6901CD884674718889FC4E1 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */,
-				0D971C3CC01A42348841F286 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */,
-				5264ACC0D43540BF845F5C35 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */,
-				8FCBEBD1708E4CD983D417DA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */,
-				F12A3F2BE486455886E8E6BF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		43695E8647ED433ABD0A5464 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		533CFDAE8515460899F13C9E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				44A648C4456A4D739BFAFE81 /* /opt/homebrew/lib/QtWidgets.framework */,
-				7B3D466D9D754BA9B9FD8B5A /* /opt/homebrew/lib/QtGui.framework */,
-				1CE484DAB9A84BD1B0190E1F /* /opt/homebrew/lib/QtCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		57D07A5AE76C4839B6E02C1E /* test_modules */ = {
-			isa = PBXGroup;
-			children = (
-				AB173335407C46EDAA93C2B7 /* Header Files */,
-				2C2E54E4EFE4439B83647BBB /* Source Files */,
-				FC0F759E1BCE4153ABE53F59 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
-			);
-			name = test_modules;
-			sourceTree = "<group>";
-		};
-		6AF25D5300994434B90111DC /* test_modules_autogen */ = {
-			isa = PBXGroup;
-			children = (
-				43695E8647ED433ABD0A5464 /* CMake Rules */,
-				90A5BCF2D213446980A2EAF9 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
+				3B0DF7BD3BAE48DCB29E572D /* CMake Rules */,
+				C96C24CA726344F79843007D /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
 			);
 			name = test_modules_autogen;
 			sourceTree = "<group>";
 		};
-		764B11570F8140D28169D75C /* ALL_BUILD */ = {
+		30674F1D819A473DA68932E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				044A5BD45E8C4AEC9C544EBA /* CMake Rules */,
-				BA322FD6D4E3496EB48DB80D /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
+				6F34D53D84F04714B0A1E95E /* /opt/homebrew/lib/QtWidgets.framework */,
+				4C73BB5015234EFEA05D7801 /* /opt/homebrew/lib/QtGui.framework */,
+				DF19B6404E5D40FE956A9DFC /* /opt/homebrew/lib/QtCore.framework */,
 			);
-			name = ALL_BUILD;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7C7A5495E90F48409E6151E4 /* CMake Rules */ = {
+		330623CFE67742E5B0C9B0AD /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		88982E90274748CEA1E7C7D1 /* Resources */ = {
+		3B0DF7BD3BAE48DCB29E572D /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		4598E736411D4257A19C58CE /* ModuleSystem_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				02C65FAF045142FD92C76B28 /* CMake Rules */,
+				0A6EC71359D04FE0AB78CEA1 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
+			);
+			name = ModuleSystem_autogen;
+			sourceTree = "<group>";
+		};
+		7114E83E14DC449C9D51A8CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		A6529F9256B64F428D56470E = {
+		73E3744530F24A558C602474 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				764B11570F8140D28169D75C /* ALL_BUILD */,
-				D2CDB8CF06584F058F79DBF2 /* ModuleSystem */,
-				D7AA5A43278944E0898A41B4 /* ModuleSystem_autogen */,
-				57D07A5AE76C4839B6E02C1E /* test_modules */,
-				6AF25D5300994434B90111DC /* test_modules_autogen */,
-				0DB75830FA164ECCA4DD4912 /* Products */,
-				533CFDAE8515460899F13C9E /* Frameworks */,
-				88982E90274748CEA1E7C7D1 /* Resources */,
+				798504BE1D184D53A853FE76 /* ModuleSystem */,
+				AE19D837F7B04C519931EADC /* test_modules */,
 			);
+			name = Products;
 			sourceTree = "<group>";
 		};
-		AB173335407C46EDAA93C2B7 /* Header Files */ = {
+		7F0FC4EE687348A7A7449B18 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				DE6D695743AD41FF88A92502 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CalculatorModule.h */,
-				64D38EEE2F174DBE991192AE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */,
-				710E38CA4FBC4E5D87994E36 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */,
-				CCF163DF431E44D1999E8BFD /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */,
-				6F4C4D6C48CE41A7A0CFA193 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */,
+				22DBC178C24F430A9D4EA3C3 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */,
+				81759D87A23D4FB4B3E5A7EC /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */,
+				43CBBDA43717469AB1195678 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */,
+				2395D86B0E6C48629C6E94FB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
 		};
-		C56DA3F263B34DE7BF84EED6 /* Source Files */ = {
+		8CAEA19644AA4BA8A9BA3B61 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				56F075FAC9E641C680AC7E7E /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */,
-				C3BDC4071DED4FBC8A72AB32 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */,
-				85ADE8068DCA4F9CB83D3843 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */,
-				112D0898230B4B389C898A64 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */,
-				400F8A4FCEE647159D670478 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */,
-				4CEB5C42F19F41719E90D796 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */,
-				6A2A58D80F40475CB26B001E /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */,
-				33ABF87856B8485C8E9DC24A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */,
+				89F04CDB7B084FB494DA550B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */,
+				B64C7E65D141479BADBC52AB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */,
+				A16927AACC2A439097B5D5EE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */,
+				8A52EC19211548F7A2A10C18 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */,
+				8AED676DA8DD4989B4007BD7 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */,
+				9AE3F8A58B99485CB9987C7B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		D2CDB8CF06584F058F79DBF2 /* ModuleSystem */ = {
+		8EF644FCB78B49B39032D5D8 = {
 			isa = PBXGroup;
 			children = (
-				FB8E24842F75447AB55CD329 /* Header Files */,
-				C56DA3F263B34DE7BF84EED6 /* Source Files */,
-				35142B2DDFDF4FF09D300381 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
+				995C67600E1E4B2E9BBB46EB /* ALL_BUILD */,
+				FA50A49686B64AFCB61A833A /* ModuleSystem */,
+				4598E736411D4257A19C58CE /* ModuleSystem_autogen */,
+				C77A5EAEDD994342BB025BB0 /* test_modules */,
+				211BCD42F95B47E98369705C /* test_modules_autogen */,
+				73E3744530F24A558C602474 /* Products */,
+				30674F1D819A473DA68932E8 /* Frameworks */,
+				7114E83E14DC449C9D51A8CB /* Resources */,
 			);
-			name = ModuleSystem;
 			sourceTree = "<group>";
 		};
-		D7AA5A43278944E0898A41B4 /* ModuleSystem_autogen */ = {
+		904505B9912D46AA94D9F1E3 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				7C7A5495E90F48409E6151E4 /* CMake Rules */,
-				752B40C29A2F416E8B50A4E8 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
+				110AE44208B14371A10A5FAD /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */,
+				3B1334EBD2B5441893F330DA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */,
+				780B5BDD00A64D49B54203BF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/PerformanceMonitor.cpp */,
+				31F757BDD29543E2A7AF13CA /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/ResizableSlotWidget.cpp */,
+				AE47FBB41DF4417D84315203 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */,
+				5786C51C989347E18B1F5BD5 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */,
+				9E3E3A86227D41D7B62223DC /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */,
+				AAAD663FF8124E699B8E5338 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */,
+				AF249A2AB9684C9BB140D810 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */,
 			);
-			name = ModuleSystem_autogen;
+			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		FB8E24842F75447AB55CD329 /* Header Files */ = {
+		995C67600E1E4B2E9BBB46EB /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				92C67B3275E34726A5A4E093 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/MainWindow.h */,
-				5387AF0ED93746A69A758418 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CalculatorModule.h */,
-				37903968C076412BBB6D5F5A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */,
-				57CB65BAE73B41FF841CE362 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */,
-				6C4E5BD771BB41D19A8E8498 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */,
-				9512DE954ADF46E184B77E53 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */,
+				330623CFE67742E5B0C9B0AD /* CMake Rules */,
+				793B94E2120743A686C57FC2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		C77A5EAEDD994342BB025BB0 /* test_modules */ = {
+			isa = PBXGroup;
+			children = (
+				7F0FC4EE687348A7A7449B18 /* Header Files */,
+				8CAEA19644AA4BA8A9BA3B61 /* Source Files */,
+				92EB646DD87749D6AC91BEC8 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
+			);
+			name = test_modules;
+			sourceTree = "<group>";
+		};
+		DD73BC13AF34499DB2546828 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C1106662E0941128E2EF9F6 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/MainWindow.h */,
+				C56FE998F3F343228C945378 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/PerformanceMonitor.h */,
+				BDC09D85B6204AC2B39F366C /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/ResizableSlotWidget.h */,
+				5D08E05F66674B6285B07D07 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/CustomModuleTemplate.h */,
+				063CA0EC7E89471FBA9C8A7F /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ExampleModule.h */,
+				FDEA27F4DEDD4428A76EF274 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleBase.h */,
+				E6BFDBB0CE174B09A431E873 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include/modules/ModuleManager.h */,
 			);
 			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		E211C2E98B34450594D57818 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D5AB680B48240FA902690F2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem.dir/Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FA50A49686B64AFCB61A833A /* ModuleSystem */ = {
+			isa = PBXGroup;
+			children = (
+				DD73BC13AF34499DB2546828 /* Header Files */,
+				E211C2E98B34450594D57818 /* Resources */,
+				904505B9912D46AA94D9F1E3 /* Source Files */,
+				8F86A4D9EDB0483CB17C78BE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/CMakeLists.txt */,
+			);
+			name = ModuleSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,39 +424,39 @@
 /* Begin PBXNativeTarget section */
 		5E8CC2BA43DD0D1EE7B163E6 /* test_modules */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E0FE2B8BDF4D4BEAAC3208AE /* Build configuration list for PBXNativeTarget "test_modules" */;
+			buildConfigurationList = E67A917DF2DC43539B050434 /* Build configuration list for PBXNativeTarget "test_modules" */;
 			buildPhases = (
-				E33A083C9F704D79A949A74B /* Sources */,
-				259179F178C543C2B742351D /* Frameworks */,
+				E2AC7546F7BF45E19487F8EB /* Sources */,
+				C31B3F22D50240FE8439CB1A /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1564180C80944EE999047353 /* PBXTargetDependency */,
-				0CCD7ECADF9841A5BA160D72 /* PBXTargetDependency */,
+				56715E0BB8804407A334CEB8 /* PBXTargetDependency */,
+				BD30F49D8BB7475E9F85EB2C /* PBXTargetDependency */,
 			);
 			name = test_modules;
 			productName = test_modules;
-			productReference = 82CA7EBFDC404C55BF721528 /* test_modules */;
+			productReference = AE19D837F7B04C519931EADC /* test_modules */;
 			productType = "com.apple.product-type.tool";
 		};
 		84598D00F515292F5439D843 /* ModuleSystem */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68470EEEEC9240918736F0CF /* Build configuration list for PBXNativeTarget "ModuleSystem" */;
+			buildConfigurationList = A7E32A8FCA0145B3B86494EB /* Build configuration list for PBXNativeTarget "ModuleSystem" */;
 			buildPhases = (
-				DB78333680BC4139AC0AC5EC /* Sources */,
-				483522595EC842BF9D96EDC0 /* Frameworks */,
+				13B7638DA6FC43FFB135A860 /* Sources */,
+				60391FFF62FE44059DBB3507 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				22298A8FCC514E5DB966A041 /* PBXTargetDependency */,
-				D58E16CF55D44D0997D41E8F /* PBXTargetDependency */,
+				5FDE2F24DBA84B8F8E03C02B /* PBXTargetDependency */,
+				60069F9FF8804D6D8DDAD8C6 /* PBXTargetDependency */,
 			);
 			name = ModuleSystem;
 			productName = ModuleSystem;
-			productReference = ED2A345D962C445B8041EB6F /* ModuleSystem */;
-			productType = "com.apple.product-type.tool";
+			productReference = 798504BE1D184D53A853FE76 /* ModuleSystem */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -456,18 +467,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 2610;
 			};
-			buildConfigurationList = 826A17C00CF04E9FBA1629B2 /* Build configuration list for PBXProject "ModuleSystem" */;
+			buildConfigurationList = 953AE67DACBE46A980336E96 /* Build configuration list for PBXProject "ModuleSystem" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				FFFE46AF03D8445B9E2C3804 /* Debug */,
-				1BCA3BAE08F741E18C242BFF /* Release */,
-				B276624BF8CE45DB8009CDD9 /* MinSizeRel */,
-				AB5E4CEE6C834667961D6CE8 /* RelWithDebInfo */,
+				D799D22F58B04F40B9619C2D /* Debug */,
+				6C4A141115E3440F81323872 /* Release */,
+				7E87A6B206B14C6C80A1D55B /* MinSizeRel */,
+				2FD8BB2DA0C34FDB864FBA22 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = A6529F9256B64F428D56470E;
+			mainGroup = 8EF644FCB78B49B39032D5D8;
 			projectDirPath = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem;
 			projectRoot = "";
 			targets = (
@@ -677,193 +688,87 @@ fi
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DB78333680BC4139AC0AC5EC /* Sources */ = {
+		13B7638DA6FC43FFB135A860 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7080F0A7B6BA4006B2A65EB9 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */,
-				CC2199E11FD14E5AAE1490F1 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */,
-				333A5523F3474A5BA8FF7BB2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */,
-				268C528DA4D742F9BD8553BF /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */,
-				D51D1293F62C46DAA0A42D8A /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */,
-				B13DF039A4CC4E9185B7E458 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */,
-				311BDF17C11046CBAF7480FE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */,
-				BA4D307CDD554A15A90431C3 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */,
+				4F1C1BA858F94DC4B915ADA3 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/mocs_compilation.cpp */,
+				6C8EB66DE6DF4CFB80849429 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/MainWindow.cpp */,
+				B4DC8B346E2545428FEEB020 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/PerformanceMonitor.cpp */,
+				11AA62ADADDD4A08AE74B344 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/ResizableSlotWidget.cpp */,
+				260668B41DBD49F892F392D2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/main.cpp */,
+				1A69D1738F5E4B588B77F7E8 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */,
+				A830F85491AE4229A329F333 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */,
+				BA58276ABD80436CBF9A6E45 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */,
+				64D2F0BA849D4356A6AB907B /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E33A083C9F704D79A949A74B /* Sources */ = {
+		E2AC7546F7BF45E19487F8EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFBB6DEA445642669C49DCD5 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */,
-				7023218F89DD45958C283166 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CalculatorModule.cpp */,
-				C79349EA352346F79BC02A86 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */,
-				F494D48648EA4547BE95EF9E /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */,
-				6DC37E2BD876493FAAD1B61F /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */,
-				2588D12B040F41018A458F7D /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */,
-				DC4094B1FAD047C89F840F26 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */,
+				AEA35DA2178A4262AC897497 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/mocs_compilation.cpp */,
+				EF14F4EFC8D6493680FDB9DB /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/CustomModuleTemplate.cpp */,
+				027479ED4EB34BB6AEB1E803 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ExampleModule.cpp */,
+				37281607F87A4BBDB54326C2 /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleBase.cpp */,
+				F0D0A3C7E3E4422B99300DDE /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/modules/ModuleManager.cpp */,
+				C61240F09B5F46428924BC6D /* /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/src/test_modules.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0CCD7ECADF9841A5BA160D72 /* PBXTargetDependency */ = {
+		008ACC1826074FBC9AAC13DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2A49F2484D76C10EF714B2C4 /* ZERO_CHECK */;
-			targetProxy = 12E918EF8BAF429089A429E3 /* PBXContainerItemProxy */;
+			targetProxy = DE4EA5E530C9471691908183 /* PBXContainerItemProxy */;
 		};
-		1564180C80944EE999047353 /* PBXTargetDependency */ = {
+		03D5ED851B4444D29E31EE9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A49F2484D76C10EF714B2C4 /* ZERO_CHECK */;
+			targetProxy = 17233E631A524F5591979C78 /* PBXContainerItemProxy */;
+		};
+		56715E0BB8804407A334CEB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 65C6AC25FE9701028DF15DCC /* test_modules_autogen */;
-			targetProxy = 9FE8B0A6105A49B285C96934 /* PBXContainerItemProxy */;
+			targetProxy = F83AA881E85B45F3A0B84DEF /* PBXContainerItemProxy */;
 		};
-		22298A8FCC514E5DB966A041 /* PBXTargetDependency */ = {
+		5FDE2F24DBA84B8F8E03C02B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F777B664748EE31B9B3A049C /* ModuleSystem_autogen */;
-			targetProxy = BF76248998C0494F9D934EFE /* PBXContainerItemProxy */;
+			targetProxy = 432044A1E9454FDDAF633C02 /* PBXContainerItemProxy */;
 		};
-		4CB70089B4B4448CB2CAAC0C /* PBXTargetDependency */ = {
+		60069F9FF8804D6D8DDAD8C6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2A49F2484D76C10EF714B2C4 /* ZERO_CHECK */;
-			targetProxy = DEFAFD15882B45FE8D9C4B9E /* PBXContainerItemProxy */;
+			targetProxy = A3EEC431A6AB47DC8B2C8C62 /* PBXContainerItemProxy */;
 		};
-		6E21AA00594E47C2B9D4C08D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A49F2484D76C10EF714B2C4 /* ZERO_CHECK */;
-			targetProxy = 868C4149F59045BE8FC42273 /* PBXContainerItemProxy */;
-		};
-		B25C84DD0E194920A4CD9077 /* PBXTargetDependency */ = {
+		8522D6CE83CA40FE96D077BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 84598D00F515292F5439D843 /* ModuleSystem */;
-			targetProxy = AF447FD9A53E467DBD794E06 /* PBXContainerItemProxy */;
+			targetProxy = 4B858F3A17424039BA410535 /* PBXContainerItemProxy */;
 		};
-		CDF53B4535E84C80AE7EF877 /* PBXTargetDependency */ = {
+		A91450738E154B458ACF602A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5E8CC2BA43DD0D1EE7B163E6 /* test_modules */;
-			targetProxy = C109E3858ED041F0BF5ED923 /* PBXContainerItemProxy */;
+			targetProxy = 7F3FA74760A74692A6D1CB76 /* PBXContainerItemProxy */;
 		};
-		D58E16CF55D44D0997D41E8F /* PBXTargetDependency */ = {
+		BD30F49D8BB7475E9F85EB2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2A49F2484D76C10EF714B2C4 /* ZERO_CHECK */;
-			targetProxy = 1840D75879354FD484A80145 /* PBXContainerItemProxy */;
+			targetProxy = F02127E2E4C04B2C923412B8 /* PBXContainerItemProxy */;
 		};
-		E5A498670C71463982F3030C /* PBXTargetDependency */ = {
+		EF4D6B49F76342AC87CFF62F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2A49F2484D76C10EF714B2C4 /* ZERO_CHECK */;
-			targetProxy = E951A9CF1C3D4A81BD0BDF9F /* PBXContainerItemProxy */;
+			targetProxy = E9496D8817454F368A28AD9C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		053B5D6C3DD54E8187B92506 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/Release;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/include_Release,/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include,"$(inherited)");
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
-				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets,/opt/homebrew/lib/QtGui.framework/Versions/A/QtGui,"-framework AppKit","-framework OpenGL","-framework ImageIO","-framework Metal",/opt/homebrew/lib/QtCore.framework/Versions/A/QtCore,"-framework IOKit","-framework DiskArbitration","-framework UniformTypeIdentifiers","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = test_modules;
-				SECTORDER_FLAGS = "";
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
-				SYSTEM_HEADER_SEARCH_PATHS = (/opt/homebrew/lib/QtCore.framework/Headers,"/opt/homebrew/share/qt/mkspecs/macx-clang",/opt/homebrew/include,/opt/homebrew/lib/QtWidgets.framework/Headers,/opt/homebrew/lib/QtGui.framework/Headers,"$(inherited)");
-				TARGET_TEMP_DIR = "/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build/test_modules.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		07D13B8059A744CBADF8C013 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/MinSizeRel;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/include_MinSizeRel,/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include,"$(inherited)");
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
-				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets,/opt/homebrew/lib/QtGui.framework/Versions/A/QtGui,"-framework AppKit","-framework OpenGL","-framework ImageIO","-framework Metal",/opt/homebrew/lib/QtCore.framework/Versions/A/QtCore,"-framework IOKit","-framework DiskArbitration","-framework UniformTypeIdentifiers","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ModuleSystem;
-				SECTORDER_FLAGS = "";
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
-				SYSTEM_HEADER_SEARCH_PATHS = (/opt/homebrew/lib/QtCore.framework/Headers,"/opt/homebrew/share/qt/mkspecs/macx-clang",/opt/homebrew/include,/opt/homebrew/lib/QtWidgets.framework/Headers,/opt/homebrew/lib/QtGui.framework/Headers,"$(inherited)");
-				TARGET_TEMP_DIR = "/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build/ModuleSystem.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		1BB5D76C3F5B4BDBB31482C9 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ModuleSystem_autogen;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		302F9B69698642159EEE2EC1 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = test_modules_autogen;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		3C8D8F108AD74905AD16282E /* Debug */ = {
+		03BA6C7583B24235AAB1E984 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -885,57 +790,7 @@ fi
 			};
 			name = Debug;
 		};
-		563F4A806D0848E79C11CE9E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SYMROOT = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build;
-			};
-			name = Debug;
-		};
-		5B7C4F0E08A74E29808BA294 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/RelWithDebInfo;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/include_RelWithDebInfo,/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include,"$(inherited)");
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++17' ";
-				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets,/opt/homebrew/lib/QtGui.framework/Versions/A/QtGui,"-framework AppKit","-framework OpenGL","-framework ImageIO","-framework Metal",/opt/homebrew/lib/QtCore.framework/Versions/A/QtCore,"-framework IOKit","-framework DiskArbitration","-framework UniformTypeIdentifiers","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ModuleSystem;
-				SECTORDER_FLAGS = "";
-				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
-				SYSTEM_HEADER_SEARCH_PATHS = (/opt/homebrew/lib/QtCore.framework/Headers,"/opt/homebrew/share/qt/mkspecs/macx-clang",/opt/homebrew/include,/opt/homebrew/lib/QtWidgets.framework/Headers,/opt/homebrew/lib/QtGui.framework/Headers,"$(inherited)");
-				TARGET_TEMP_DIR = "/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build/ModuleSystem.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		5BF5DD1A8E864AA4A09D5636 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build;
-			};
-			name = Release;
-		};
-		5F0A66AE2959454485AF591C /* Debug */ = {
+		0751C94F0AB7402E91DE6D71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -950,6 +805,7 @@ fi
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/include_Debug,/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include,"$(inherited)");
+				INFOPLIST_FILE = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem.dir/Info.plist;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
 				ONLY_ACTIVE_ARCH = NO;
@@ -966,21 +822,22 @@ fi
 			};
 			name = Debug;
 		};
-		7616C764991A4E9F86E46AE6 /* Release */ = {
+		07E895CC570D46ACBFB21941 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/Release;
+				CONFIGURATION_BUILD_DIR = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/MinSizeRel;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/include_Release,/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include,"$(inherited)");
+				HEADER_SEARCH_PATHS = (/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/include_MinSizeRel,/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include,"$(inherited)");
+				INFOPLIST_FILE = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem.dir/Info.plist;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
 				ONLY_ACTIVE_ARCH = NO;
@@ -995,85 +852,9 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
+			name = MinSizeRel;
 		};
-		7B28DB6532F645F3AFBE356E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ModuleSystem_autogen;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		8A45578FA1444C2184979234 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build;
-			};
-			name = RelWithDebInfo;
-		};
-		909EFB705F4A4F0F904736CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ModuleSystem_autogen;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		AB8D87FAC5F742A5A22AAEA9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		BA90CE333D4C407C9DE9E479 /* RelWithDebInfo */ = {
+		0D3955A529ED4AFA9CABF74C /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1104,7 +885,51 @@ fi
 			};
 			name = RelWithDebInfo;
 		};
-		C113F175494D4BDF8EFE8D57 /* Release */ = {
+		16EABD3A61A94D00BC519E7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		1DA0FC52E25A4ED980E6EDEF /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		27502A112C524E0CA5963DE9 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1124,9 +949,40 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
+			name = RelWithDebInfo;
 		};
-		CB7A627A9E7840C4BB953004 /* MinSizeRel */ = {
+		2CEFE8A1295241B396FC0C48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SYMROOT = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build;
+			};
+			name = Debug;
+		};
+		2D83622095DB4942901C8BAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		3222769BB2094E3EA5C38E2F /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1148,7 +1004,39 @@ fi
 			};
 			name = MinSizeRel;
 		};
-		CCFD957EEC644CD28C50998C /* RelWithDebInfo */ = {
+		358A92D3894D4D2CB490403B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build;
+			};
+			name = Release;
+		};
+		35BFFB809C40452E8B1D0E10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ModuleSystem_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		3F949C099AE942E59DA4CBCB /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1170,7 +1058,276 @@ fi
 			};
 			name = RelWithDebInfo;
 		};
-		CE452FDDDE4E48C2AF51327E /* Debug */ = {
+		4E92BBDCD0664BF19A0BE160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ModuleSystem_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		580548AE2A1A48879F1CBAA0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/include_RelWithDebInfo,/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include,"$(inherited)");
+				INFOPLIST_FILE = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem.dir/Info.plist;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets,/opt/homebrew/lib/QtGui.framework/Versions/A/QtGui,"-framework AppKit","-framework OpenGL","-framework ImageIO","-framework Metal",/opt/homebrew/lib/QtCore.framework/Versions/A/QtCore,"-framework IOKit","-framework DiskArbitration","-framework UniformTypeIdentifiers","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ModuleSystem;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				SYSTEM_HEADER_SEARCH_PATHS = (/opt/homebrew/lib/QtCore.framework/Headers,"/opt/homebrew/share/qt/mkspecs/macx-clang",/opt/homebrew/include,/opt/homebrew/lib/QtWidgets.framework/Headers,/opt/homebrew/lib/QtGui.framework/Headers,"$(inherited)");
+				TARGET_TEMP_DIR = "/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build/ModuleSystem.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5A0A0B3EAF7D4D7788DB6CB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/test_modules_autogen/include_Release,/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include,"$(inherited)");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets,/opt/homebrew/lib/QtGui.framework/Versions/A/QtGui,"-framework AppKit","-framework OpenGL","-framework ImageIO","-framework Metal",/opt/homebrew/lib/QtCore.framework/Versions/A/QtCore,"-framework IOKit","-framework DiskArbitration","-framework UniformTypeIdentifiers","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_modules;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				SYSTEM_HEADER_SEARCH_PATHS = (/opt/homebrew/lib/QtCore.framework/Headers,"/opt/homebrew/share/qt/mkspecs/macx-clang",/opt/homebrew/include,/opt/homebrew/lib/QtWidgets.framework/Headers,/opt/homebrew/lib/QtGui.framework/Headers,"$(inherited)");
+				TARGET_TEMP_DIR = "/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build/test_modules.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		5D95C97158BE4A3C9808A78B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/bin/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/ModuleSystem_autogen/include_Release,/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/include,"$(inherited)");
+				INFOPLIST_FILE = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/CMakeFiles/ModuleSystem.dir/Info.plist;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets,/opt/homebrew/lib/QtGui.framework/Versions/A/QtGui,"-framework AppKit","-framework OpenGL","-framework ImageIO","-framework Metal",/opt/homebrew/lib/QtCore.framework/Versions/A/QtCore,"-framework IOKit","-framework DiskArbitration","-framework UniformTypeIdentifiers","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ModuleSystem;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (/opt/homebrew/lib,"$(inherited)");
+				SYSTEM_HEADER_SEARCH_PATHS = (/opt/homebrew/lib/QtCore.framework/Headers,"/opt/homebrew/share/qt/mkspecs/macx-clang",/opt/homebrew/include,/opt/homebrew/lib/QtWidgets.framework/Headers,/opt/homebrew/lib/QtGui.framework/Headers,"$(inherited)");
+				TARGET_TEMP_DIR = "/Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build/ModuleSystem.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		7D906531E83F4429A080F425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		952DF6C7FED54E3EB906CF11 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = test_modules_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A50A3C5622434204AA57E119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		A55CE383608A4AC9A3039933 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		BEA1C9D525B649CA834060F1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D4F736982E9F4A1E9881377F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ModuleSystem_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D628AD14645B4B60A8EBF1DA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build;
+			};
+			name = MinSizeRel;
+		};
+		D7FC5AA4011043009A564500 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		E142236C55264A548E6DD081 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1201,39 +1358,7 @@ fi
 			};
 			name = Debug;
 		};
-		D554CFD5FD2749DDACC6BAE0 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Volumes/ACGcomrade_entelechy/kaiMemoriesProject/moduleSystem/build/build;
-			};
-			name = MinSizeRel;
-		};
-		DA61DE9E7DA24A4A9622DBA3 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		E4D1FC9315004FA596EFC6DA /* MinSizeRel */ = {
+		E78094BB33CB46F6B4BE565D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1253,119 +1378,9 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = MinSizeRel;
-		};
-		E6DB3FB9F14C425A8456B4C6 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		E958E0F644074628A7DBBD03 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		ED68F934570F4AB1A77752FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
 			name = Release;
 		};
-		F0E675833A05460F973C10E0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		FAE2D5866186458E9E4E116E /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		FB41837B4A01424996300817 /* MinSizeRel */ = {
+		EDFF102914DD4566B0747CD4 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1399,79 +1414,79 @@ fi
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C6158680D0F4DF48EC2D2C9 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		2719A64C94174A4DA3968873 /* Build configuration list for PBXAggregateTarget "test_modules_autogen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB8D87FAC5F742A5A22AAEA9 /* Debug */,
-				ED68F934570F4AB1A77752FA /* Release */,
-				CB7A627A9E7840C4BB953004 /* MinSizeRel */,
-				DA61DE9E7DA24A4A9622DBA3 /* RelWithDebInfo */,
+				03BA6C7583B24235AAB1E984 /* Debug */,
+				E78094BB33CB46F6B4BE565D /* Release */,
+				952DF6C7FED54E3EB906CF11 /* MinSizeRel */,
+				27502A112C524E0CA5963DE9 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		68470EEEEC9240918736F0CF /* Build configuration list for PBXNativeTarget "ModuleSystem" */ = {
+		37734714B195452089DB508E /* Build configuration list for PBXAggregateTarget "ModuleSystem_autogen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5F0A66AE2959454485AF591C /* Debug */,
-				7616C764991A4E9F86E46AE6 /* Release */,
-				07D13B8059A744CBADF8C013 /* MinSizeRel */,
-				5B7C4F0E08A74E29808BA294 /* RelWithDebInfo */,
+				35BFFB809C40452E8B1D0E10 /* Debug */,
+				4E92BBDCD0664BF19A0BE160 /* Release */,
+				D4F736982E9F4A1E9881377F /* MinSizeRel */,
+				3F949C099AE942E59DA4CBCB /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		826A17C00CF04E9FBA1629B2 /* Build configuration list for PBXProject "ModuleSystem" */ = {
+		466F446570704D22900CBE6F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				563F4A806D0848E79C11CE9E /* Debug */,
-				5BF5DD1A8E864AA4A09D5636 /* Release */,
-				D554CFD5FD2749DDACC6BAE0 /* MinSizeRel */,
-				8A45578FA1444C2184979234 /* RelWithDebInfo */,
+				2D83622095DB4942901C8BAE /* Debug */,
+				A50A3C5622434204AA57E119 /* Release */,
+				1DA0FC52E25A4ED980E6EDEF /* MinSizeRel */,
+				A55CE383608A4AC9A3039933 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		8B18387CC1D8465697E05465 /* Build configuration list for PBXAggregateTarget "ModuleSystem_autogen" */ = {
+		953AE67DACBE46A980336E96 /* Build configuration list for PBXProject "ModuleSystem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7B28DB6532F645F3AFBE356E /* Debug */,
-				909EFB705F4A4F0F904736CB /* Release */,
-				1BB5D76C3F5B4BDBB31482C9 /* MinSizeRel */,
-				CCFD957EEC644CD28C50998C /* RelWithDebInfo */,
+				2CEFE8A1295241B396FC0C48 /* Debug */,
+				358A92D3894D4D2CB490403B /* Release */,
+				D628AD14645B4B60A8EBF1DA /* MinSizeRel */,
+				D7FC5AA4011043009A564500 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		B4B86CA6FB024AA0A4B91705 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		A7E32A8FCA0145B3B86494EB /* Build configuration list for PBXNativeTarget "ModuleSystem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E958E0F644074628A7DBBD03 /* Debug */,
-				F0E675833A05460F973C10E0 /* Release */,
-				FAE2D5866186458E9E4E116E /* MinSizeRel */,
-				E6DB3FB9F14C425A8456B4C6 /* RelWithDebInfo */,
+				0751C94F0AB7402E91DE6D71 /* Debug */,
+				5D95C97158BE4A3C9808A78B /* Release */,
+				07E895CC570D46ACBFB21941 /* MinSizeRel */,
+				580548AE2A1A48879F1CBAA0 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		CFFA0486A1F44E36BBDED7D2 /* Build configuration list for PBXAggregateTarget "test_modules_autogen" */ = {
+		E0FE06A050EC41948DDD800E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C8D8F108AD74905AD16282E /* Debug */,
-				C113F175494D4BDF8EFE8D57 /* Release */,
-				E4D1FC9315004FA596EFC6DA /* MinSizeRel */,
-				302F9B69698642159EEE2EC1 /* RelWithDebInfo */,
+				7D906531E83F4429A080F425 /* Debug */,
+				16EABD3A61A94D00BC519E7F /* Release */,
+				3222769BB2094E3EA5C38E2F /* MinSizeRel */,
+				BEA1C9D525B649CA834060F1 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		E0FE2B8BDF4D4BEAAC3208AE /* Build configuration list for PBXNativeTarget "test_modules" */ = {
+		E67A917DF2DC43539B050434 /* Build configuration list for PBXNativeTarget "test_modules" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE452FDDDE4E48C2AF51327E /* Debug */,
-				053B5D6C3DD54E8187B92506 /* Release */,
-				FB41837B4A01424996300817 /* MinSizeRel */,
-				BA90CE333D4C407C9DE9E479 /* RelWithDebInfo */,
+				E142236C55264A548E6DD081 /* Debug */,
+				5A0A0B3EAF7D4D7788DB6CB5 /* Release */,
+				EDFF102914DD4566B0747CD4 /* MinSizeRel */,
+				0D3955A529ED4AFA9CABF74C /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

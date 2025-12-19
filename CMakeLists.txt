@@ -37,6 +37,7 @@ set(SOURCES
     src/main.cpp
     src/MainWindow.cpp
     src/PerformanceMonitor.cpp
+    src/ResizableSlotWidget.cpp
     src/modules/ModuleBase.cpp
     src/modules/ModuleManager.cpp
     src/modules/ExampleModule.cpp
@@ -47,6 +48,7 @@ set(SOURCES
 set(HEADERS
     include/MainWindow.h
     include/PerformanceMonitor.h
+    include/ResizableSlotWidget.h
     include/modules/ModuleBase.h
     include/modules/ModuleManager.h
     include/modules/ExampleModule.h

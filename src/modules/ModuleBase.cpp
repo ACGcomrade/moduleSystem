@@ -47,72 +47,64 @@ ModuleBase::~ModuleBase() {
     qDebug() << "[Module" << m_id << "] Destroyed:" << m_title;
 }
 
-// 新方法：附着到槽位
-void ModuleBase::attachToSlot(const QRect& slotGlobalRect) {
+// 新方法：附着到白板（简化版 - 直接使用白板坐标）
+void ModuleBase::attachToSlot(const QRect& boardGlobalRect) {
     m_isAttached = true;
-    m_attachedSlotRect = slotGlobalRect;
+    m_attachedSlotRect = boardGlobalRect;
 
-    // 先临时显示窗口以获取准确的框架尺寸
+    // 显示窗口
     show();
 
-    // 强制处理事件，确保窗口框架已创建
-    QApplication::processEvents();
+    // 简单地将模块窗口移动到白板位置并调整为白板大小
+    // 用户可以使用Qt原生的窗口控制来调整大小
+    setGeometry(boardGlobalRect);
 
-    // 获取窗口框架（包括标题栏）的大小
-    QRect frameRect = frameGeometry();
-    QRect contentRect = geometry();
-
-    // 计算标题栏和边框的额外高度和宽度
-    int frameTopHeight = frameRect.y() - contentRect.y();  // 这应该是负数，取绝对值
-    int frameBottomHeight = (frameRect.height() - contentRect.height()) - abs(frameTopHeight);
-    int frameLeftWidth = contentRect.x() - frameRect.x();  // 这应该是负数，取绝对值
-    int frameRightWidth = (frameRect.width() - contentRect.width()) - abs(frameLeftWidth);
-
-    // 修正为绝对值
-    frameTopHeight = abs(frameTopHeight);
-    frameLeftWidth = abs(frameLeftWidth);
-
-    qDebug() << "[Module" << m_id << "] Frame geometry:" << frameRect;
-    qDebug() << "[Module" << m_id << "] Content geometry:" << contentRect;
-    qDebug() << "[Module" << m_id << "] Frame margins - Top:" << frameTopHeight
-             << "Bottom:" << frameBottomHeight << "Left:" << frameLeftWidth
-             << "Right:" << frameRightWidth;
-
-    // 计算内容区域的目标大小（槽位大小减去框架）
-    QSize targetContentSize(
-        slotGlobalRect.width() - frameLeftWidth - frameRightWidth,
-        slotGlobalRect.height() - frameTopHeight - frameBottomHeight
-    );
-
-    // 窗口位置：槽位位置就是窗口框架的左上角位置
-    QPoint targetPos = slotGlobalRect.topLeft();
-
-    // 设置内容区域的大小限制
-    setMaximumSize(targetContentSize);
-    setMinimumSize(targetContentSize);
-
-    // 先设置大小
-    resize(targetContentSize);
-
-    // 再移动到目标位置（move会移动框架的左上角）
-    move(targetPos);
+    // 移除所有大小限制，允许用户自由调整
+    setMinimumSize(200, 150);  // 只设置一个合理的最小值
+    setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
 
     raise();
 
-    qDebug() << "[Module" << m_id << "] Attached to slot at:" << slotGlobalRect
-             << "Target content size:" << targetContentSize << "Window position:" << targetPos;
+    qDebug() << "[Module" << m_id << "] Attached to board at:" << boardGlobalRect;
 }
 
-// 新方法：从槽位分离
+// 新方法：附着到白板（切换到无边框模式）
+void ModuleBase::attachToBoard() {
+    m_isAttached = true;
+
+    // 切换到无边框窗口（模拟嵌入模式）
+    Qt::WindowFlags flags = windowFlags();
+    flags |= Qt::FramelessWindowHint;  // 添加无边框标志
+    flags |= Qt::WindowStaysOnTopHint;
+    setWindowFlags(flags);
+
+    // 显示窗口
+    show();
+    raise();
+
+    qDebug() << "[Module" << m_id << "] Attached to board (frameless mode)";
+}
+
+// 新方法：从白板分离（切换到正常窗口模式）
 void ModuleBase::detachFromSlot() {
     m_isAttached = false;
     m_attachedSlotRect = QRect();
 
-    // 恢复大小限制，允许自由调整
-    setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
-    setMinimumSize(300, 400);
+    // 恢复正常窗口模式（有标题栏）
+    Qt::WindowFlags flags = Qt::Window | Qt::WindowStaysOnTopHint;
+    setWindowFlags(flags);
+    setWindowTitle(m_title);
 
-    qDebug() << "[Module" << m_id << "] Detached from slot";
+    // 显示窗口
+    show();
+    raise();
+
+    qDebug() << "[Module" << m_id << "] Detached from board (window mode)";
+}
+
+// 获取内容widget
+QWidget* ModuleBase::getContentWidget() {
+    return contentWidget();
 }
 
 // 新方法：移动到全局位置

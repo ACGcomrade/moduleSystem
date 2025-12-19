@@ -2,23 +2,49 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <QScrollArea>
+#include <QWidget>
 #include <QLabel>
-#include <QPushButton>
 #include <QMenuBar>
 #include <QList>
+#include <QRect>
+#include <QPoint>
+#include <QMouseEvent>
 #include "modules/ModuleManager.h"
 
 /**
- * @brief 主窗口类（改进版）
+ * @brief 无限大的可拖拽白板widget
+ */
+class DraggableBoardWidget : public QWidget {
+    Q_OBJECT
+public:
+    explicit DraggableBoardWidget(QWidget *parent = nullptr);
+
+    // 添加模块到白板
+    void addModuleWidget(QWidget* moduleWidget, const QPoint& pos);
+    void removeModuleWidget(QWidget* moduleWidget);
+
+signals:
+    void boardMoved(const QPoint& delta);  // 白板移动时发出信号
+
+protected:
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
+    void paintEvent(QPaintEvent *event) override;
+
+private:
+    bool m_dragging;
+    QPoint m_dragStartPos;
+    QList<QWidget*> m_moduleWidgets;  // 白板上的模块widget列表
+};
+
+/**
+ * @brief 主窗口类（多模块吸附版）
  *
  * 提供模块化UI的主窗口，包含：
  * - 菜单栏用于创建模块
- * - 动态槽位用于放置模块（自动扩展）
- * - 支持模块的拖拽和重新排列
- * - 支持水平滚动以容纳更多模块
+ * - 可拖拽的白板区域
+ * - 多个模块可以吸附到白板
  */
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -27,10 +53,12 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    // 获取白板的全局矩形区域
+    QRect getBoardGlobalRect() const;
+
 protected:
     void resizeEvent(QResizeEvent *event) override;
     void moveEvent(QMoveEvent *event) override;
-    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private slots:
     // 模块创建
@@ -45,37 +73,37 @@ private slots:
     void onModuleCloseRequested(ModuleBase* module);
     void onModuleDragPositionChanged(ModuleBase* module, const QPoint& globalPos);
 
+    // 白板移动处理
+    void onBoardMoved(const QPoint& delta);
+
+    // 定时更新吸附模块位置
+    void updateAttachedModulesPosition();
+
 private:
     void setupUI();
     void setupMenuBar();
-    void setupBoard();
-    int findEmptySlot();
-    int findEmptyVisibleSlot();  // 查找可见的空槽位
-    void placeModuleInSlot(ModuleBase* module, int slotIndex);
-    void removeModuleFromSlot(ModuleBase* module);
-    int findSlotAtPosition(const QPoint& globalPos);
-    bool isSlotVisible(int slotIndex);  // 检查槽位是否在可视区域内
-    void highlightSlot(int slotIndex, bool highlight);
-    void ensureMinimumSlots();
-    void addNewSlot();
+    void updateBoardGlobalRect();
+
+    // 检查模块是否完全在白板内
+    bool isModuleFullyInBoard(ModuleBase* module);
+
+    // 卡槽结构
+    struct Slot {
+        QWidget* widget;       // 卡槽widget
+        QRect localRect;       // 卡槽在白板中的本地坐标
+        ModuleBase* module;    // 吸附的模块
+        bool isOccupied;       // 是否被占用
+    };
+
+    // 创建临时卡槽
+    Slot* createTemporarySlot(const QRect& moduleRect);
+    void removeSlot(Slot* slot);
 
     // UI组件
     QWidget* m_centralWidget;
-    QScrollArea* m_scrollArea;
-    QWidget* m_boardWidget;
-    QHBoxLayout* m_boardLayout;
-
-    // 动态槽位管理（新架构：槽位只是占位符，不包含实际widget）
-    struct Slot {
-        QWidget* widget;        // 槽位占位符widget
-        QLabel* placeholder;    // 显示"空槽位"或"已占用"的标签
-        ModuleBase* module;     // 吸附到此槽位的模块（模块仍是独立窗口）
-        QRect globalRect;       // 槽位在屏幕上的全局矩形
-    };
-    QList<Slot> m_slots;  // 动态槽位列表
-    static const int MIN_SLOTS = 3;  // 最少保持3个空槽位
-    static const int SLOT_MIN_WIDTH = 300;
-    static const int SLOT_MIN_HEIGHT = 400;
+    DraggableBoardWidget* m_boardWidget;  // 白板区域（可拖拽）
+    QLabel* m_boardLabel;    // 白板提示标签
+    QLabel* m_notificationLabel;  // 左上角通知标签
 
     // 模块管理
     ModuleManager* m_moduleManager;
@@ -83,11 +111,18 @@ private:
     // 所有模块列表（所有模块都是独立窗口）
     QList<ModuleBase*> m_allModules;
 
-    // 更新槽位的全局位置
-    void updateSlotGeometries();
+    // 卡槽列表
+    QList<Slot*> m_slots;
 
-    // 更新所有附着模块的位置和大小
-    void updateAttachedModules();
+    // 白板的全局矩形
+    QRect m_boardGlobalRect;
+
+    // 定时器用于更新吸附模块位置
+    QTimer* m_updateTimer;
+
+    // 白板的初始大小（可以无限扩展）
+    static const int BOARD_WIDTH = 3000;
+    static const int BOARD_HEIGHT = 2000;
 };
 
 #endif // MAINWINDOW_H

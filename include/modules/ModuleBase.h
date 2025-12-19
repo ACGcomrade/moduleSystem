@@ -50,10 +50,14 @@ public:
     virtual void clear() = 0;
     virtual QWidget* contentWidget() = 0;
 
-    // 新架构：附着/分离状态管理
-    void attachToSlot(const QRect& slotGlobalRect);  // 附着到槽位
-    void detachFromSlot();                            // 从槽位分离
+    // 新架构：窗口模式 vs 嵌入模式切换
+    void attachToSlot(const QRect& slotGlobalRect);  // 旧方法，兼容性保留
+    void attachToBoard();                             // 切换到嵌入模式（无窗口框架）
+    void detachFromSlot();                            // 切换到窗口模式（有窗口框架）
     bool isAttached() const { return m_isAttached; }
+
+    // 获取内容widget（用于嵌入到白板）
+    QWidget* getContentWidget();
 
     // 移动到指定全局位置
     void moveToGlobalPos(const QPoint& globalPos);
